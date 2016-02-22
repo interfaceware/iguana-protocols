@@ -1,0 +1,16 @@
+<channel
+   name="CDA - Consume document"
+   guid="9D7999947CDD4F3ECC4EFBB3DF2D1AED"
+   description="Consume a CDA document by parsing it with xml.parse{}. &#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/parse-and-serialize-a-cda"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="CDA_-_Consume_document-From-xhmTjubxho4YGD"
+      commit_id="89db8406a1d86c71d4835a40c63e5e78141a5e5d"
+      commit_comment="Fleshed out CDA example."
+      poll_time="10000">
+   </from_mapper>
+</channel>
