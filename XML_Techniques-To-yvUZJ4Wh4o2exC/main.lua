@@ -1,5 +1,6 @@
 -- This xml module provides a few extra helpful little utility functions
--- See http://help.interfaceware.com/kb/xml-node-functions
+-- http://help.interfaceware.com/v6/xml-channel
+
 require 'xml'
 
 -- This project shows a whole suite a techniques which are handy when dealing with
