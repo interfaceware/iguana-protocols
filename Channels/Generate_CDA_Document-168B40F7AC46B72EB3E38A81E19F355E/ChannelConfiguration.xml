@@ -1,0 +1,25 @@
+<channel
+   name="Generate CDA Document"
+   guid="168B40F7AC46B72EB3E38A81E19F355E"
+   description="A comprehensive CCD (C32) compliant document that includes most of the common elements, and passes NIST validation &#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/generate-a-cda-document"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_http
+      type="mapper"
+      guid="CDA_Complete_CCD_C32-FromHTTP-c9b0NYNe2AEVB0"
+      commit_id="80007806572b1845a12a3c6c15f5dcfe871288c1"
+      commit_comment="Alphabetically sorted."
+      mapper_url_path="comprehensive-CDA"/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>
