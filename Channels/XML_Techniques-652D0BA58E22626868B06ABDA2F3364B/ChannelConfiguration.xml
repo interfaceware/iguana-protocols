@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="XML_Techniques-To-yvUZJ4Wh4o2exC"
-      commit_id="a3988bf98756611406e441c8377e94ea5d318b23"
-      commit_comment="Updated URL links.">
+      commit_id="12b522ada7d2a0b77c969b5e28c51f2fc01ee30d"
+      commit_comment="Shifted to use local dependency.">
    </to_mapper>
    <from_channel/>
 </channel>

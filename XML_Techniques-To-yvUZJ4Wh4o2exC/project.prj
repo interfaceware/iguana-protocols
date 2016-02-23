@@ -2,16 +2,15 @@
     "LocalDependencies": [
         "Common.lua",
         "MapADT.lua",
-        "MapLab.lua"
+        "MapLab.lua",
+        "demo.vmd"
     ],
     "LuaDependencies": [
         "stringutil",
         "xml"
     ],
-    "OtherDependencies": [
-        "demo.vmd"
-    ],
-    "timestamp": "1456177254",
+    "OtherDependencies": [],
+    "timestamp": "1456245782",
     "version_info": {
         "build": 0,
         "major": 6,
