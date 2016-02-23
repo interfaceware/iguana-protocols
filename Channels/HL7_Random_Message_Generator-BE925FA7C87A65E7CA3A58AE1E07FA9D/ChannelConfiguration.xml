@@ -32,8 +32,8 @@
    </to_llp_client>
    <from_mapper
       guid="Random_ADT_Message_Generator-From-6lvpNA6tBBa0X5"
-      commit_id="2eba20c9368601f6344ec6d2290627f5d20a4ff3"
-      commit_comment="Got rid of the node module."
+      commit_id="a9bc59da1538a219c4ab53155bc3a4ca19982cd2"
+      commit_comment="Get rid of shared demo dependency."
       poll_time="10000">
    </from_mapper>
 </channel>
