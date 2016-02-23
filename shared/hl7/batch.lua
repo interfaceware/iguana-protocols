@@ -43,6 +43,8 @@ function batch.split(Data)
          StartIndex = i
       end
    end
+   -- Get last trailing message if it exists.
+   ExtractMessage(Segments, StartIndex, #Segments, Messages)
    return Messages
 end
 

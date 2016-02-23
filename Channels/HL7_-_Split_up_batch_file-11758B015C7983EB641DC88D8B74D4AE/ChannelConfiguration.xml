@@ -9,8 +9,8 @@
    </to_channel>
    <from_mapper
       guid="Process_HL7_Batch_Message-From-GvmyAB2ngb1MQw"
-      commit_id="81a9b914bfe3acda084b23f7adec8cca322899f3"
-      commit_comment="Simplified the code."
+      commit_id="1ae0f53cfab1d0753dddbffa7c797b68c91e0395"
+      commit_comment="Comment"
       poll_time="10000">
    </from_mapper>
 </channel>
