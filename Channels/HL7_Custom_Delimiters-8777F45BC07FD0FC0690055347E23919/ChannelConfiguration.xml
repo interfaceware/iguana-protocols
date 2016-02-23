@@ -45,7 +45,7 @@
       error_handling="0"
       use_translator_filter="true"
       translator_guid="HL7_Custom_Delimiters-Filter-tZiqmriIKj4bkB"
-      translator_commit_id="ce247f16ec116bd9dc7196d83b31ae05f8fbb7f9"
-      translator_commit_comment="Import Translators: Import HL7 and XML channels.">
+      translator_commit_id="8a441c6bac55ac1662eaab32ebb1c7f06def816e"
+      translator_commit_comment="Got rid of shared demo.vmd dependency.">
    </message_filter>
 </channel>
