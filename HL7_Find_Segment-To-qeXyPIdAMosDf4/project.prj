@@ -1,13 +1,12 @@
 {
-    "LocalDependencies": [],
+    "LocalDependencies": [
+        "demo.vmd"
+    ],
     "LuaDependencies": [
         "hl7.findSegment"
     ],
-    "OtherDependencies": [
-        "demo.vmd",
-        "example/demo.vmd"
-    ],
-    "timestamp": "1453138091",
+    "OtherDependencies": [],
+    "timestamp": "1456245561",
     "version_info": {
         "build": 0,
         "major": 6,

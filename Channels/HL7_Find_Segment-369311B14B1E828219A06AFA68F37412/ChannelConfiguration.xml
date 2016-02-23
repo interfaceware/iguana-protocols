@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="HL7_Find_Segment-To-qeXyPIdAMosDf4"
-      commit_id="ce247f16ec116bd9dc7196d83b31ae05f8fbb7f9"
-      commit_comment="Import Translators: Import HL7 and XML channels.">
+      commit_id="33696bf39be6fb32fd18b8193e29298c445e23c4"
+      commit_comment="Get rid of shared vmd dependency.">
       <dequeue_list>
          <dequeue
             source_guid="00000000000000000000000000000000"
@@ -17,7 +17,7 @@
    </to_mapper>
    <from_llp_listener
       ack_vmd_path="/Applications/iNTERFACEWARE-Iguana.app/Contents/iNTERFACEWARE-Iguana/autoack.vmd"
-      port="7009"
+      port="8009"
       connection_timeout="30"
       unlimited_connection_timeout="false"
       ack_style="fast"/>
