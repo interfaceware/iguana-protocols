@@ -1,0 +1,16 @@
+<channel
+   name="HL7 - Split up batch file"
+   guid="11758B015C7983EB641DC88D8B74D4AE"
+   description="This example shows a simple module for reading in a batch of HL7 messages.&#xD;&#xA;&#xD;&#xA;It ignores the file and batch header segments and collects up the messages.&#xD;&#xA;"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Process_HL7_Batch_Message-From-GvmyAB2ngb1MQw"
+      commit_id="81a9b914bfe3acda084b23f7adec8cca322899f3"
+      commit_comment="Simplified the code."
+      poll_time="10000">
+   </from_mapper>
+</channel>
