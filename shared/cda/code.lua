@@ -50,7 +50,7 @@ function cda.code.set(I)
    if I.value and I.lookup and I.system then 
       T:setAttr('code', I.value)
       T:setAttr('codeSystem', I.system)
-      T:setAttr('codeSystemName', cda.codeset.cat[system])
+      T:setAttr('codeSystemName', cda.codeset.cat.reverse[I.system])
       T:setAttr('displayName', I.lookup[I.value])      
    end
    

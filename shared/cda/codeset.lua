@@ -1800,3 +1800,6 @@ cda.codeset.ethnicGroup = {
 }
 
 cda.codeset.ethnicGroup.reverse = Reverse(cda.codeset.ethnicGroup)
+
+
+cda.codeset.cat.reverse = Reverse(cda.codeset.cat)
