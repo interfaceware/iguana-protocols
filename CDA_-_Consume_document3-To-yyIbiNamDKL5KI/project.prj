@@ -1,0 +1,13 @@
+{
+    "LocalDependencies": [
+        "problems.lua"
+    ],
+    "LuaDependencies": [],
+    "OtherDependencies": [],
+    "timestamp": "1459516298",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

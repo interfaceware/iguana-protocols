@@ -1,0 +1,14 @@
+<channel
+   name="CDA - Consume document"
+   guid="335A292050CD001B40462C5A63A4FE68"
+   description=""
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="CDA_-_Consume_document3-To-yyIbiNamDKL5KI"
+      commit_id="2a850921c9cb7e444e2d10a7d6b60119150d6170"
+      commit_comment="Consume example simplified for 6.0.3">
+   </to_mapper>
+   <from_channel/>
+</channel>
