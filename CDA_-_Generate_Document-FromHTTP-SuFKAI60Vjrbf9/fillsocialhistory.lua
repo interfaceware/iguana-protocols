@@ -3,7 +3,6 @@ local setInner = node.setInner
 local setText = node.setText
 local setAttr = node.setAttr
 
-
 function FillSocialHistory(T)
    local S = addElement(T, 'section')
    cda.id.template.add{target=S, 

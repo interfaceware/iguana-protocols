@@ -42,6 +42,37 @@ end
 
 cda.help.set{func=cda.id.add, info=cdaIdAddHelp}
 
+local cdaIdSetHelp = {
+   title="cda.id.set",
+   usage=[[cda.id.set{target=<{ELEMENT}>, value=<EXTENSION>, id_type=<ROOT>} ]],
+   description=[[CHANGE DESCRIPTION]],
+   returns={"A parsed tree representing the populated XML element"},
+   parameters={
+      [1]={['parameter']='target',['description']='The element to be updated'},
+   },
+   optional_parameters={
+      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID'},
+      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID'},
+   },
+   examples={[[CHANGE EXAMPLES]]}
+}
+
+function cda.id.set(I)
+   check(I, cdaIdSetHelp) -- modified
+
+   local Id = I.target    -- modified
+   if I.id_type then
+      if I.value then
+         Id:setAttr('extension', I.value)
+      end
+      Id:setAttr('root', I.id_type)
+   end
+
+   return Id
+end
+
+cda.help.set{func=cda.id.set, info=cdaIdSetHelp}
+
 local cdaIdTemplateAddHelp = {
    title="cda.id.template.add",
    usage=[[cda.id.template.add{target=<{PARENT}>, value=<EXTENSION>, id_type=<ROOT>}]],

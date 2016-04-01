@@ -10,6 +10,7 @@ require 'cda.dose'
 require 'cda.demographic'
 
 -- "standard" schema used for the CCD and minimal templates
+-- this template contains all the mandatory attributes for a CDA header
 local CdaSchema =[[
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3"
         xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">

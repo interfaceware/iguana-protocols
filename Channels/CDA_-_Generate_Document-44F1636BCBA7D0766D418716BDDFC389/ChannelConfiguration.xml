@@ -10,8 +10,8 @@
    <from_http
       type="mapper"
       guid="CDA_-_Generate_Document-FromHTTP-SuFKAI60Vjrbf9"
-      commit_id="b6839c053011ec6e82b87173588de11437c6386a"
-      commit_comment="Import Translators: CDA"
+      commit_id="d77b3d669874c7c0338093d30cedcfa4acb46433"
+      commit_comment="Import Translators: Julian version"
       mapper_url_path="comprehensive-CDA"/>
    <message_filter
       filter_after_logging="false"

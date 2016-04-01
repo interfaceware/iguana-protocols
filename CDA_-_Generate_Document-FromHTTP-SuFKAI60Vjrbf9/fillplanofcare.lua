@@ -1,9 +1,7 @@
-
 local addElement = node.addElement
 local setInner = node.setInner
 local setText = node.setText
 local setAttr = node.setAttr
-
 
 function FillPlanOfCare(T)
    local S = addElement(T, 'section')

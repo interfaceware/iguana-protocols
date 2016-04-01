@@ -1,4 +1,3 @@
-
 local addElement = node.addElement
 local setAttr = node.setAttr
 
@@ -7,13 +6,14 @@ function FillAuthor(A)
    local AA = addElement(A, 'assignedAuthor')
    cda.id.add{target=AA, value='99999999', id_type=cda.codeset.cat["National Provider Identifier"]}
    cda.code.add{target=AA, element='code', system=cda.codeset.cat["Provider Codes"],
-      value=cda.codeset.providerCodes["Allopathic &amp; Osteopathic Physicians"], lookup=cda.codeset.providerCodes.reverse}  
+      value=cda.codeset.providerCodes["Allopathic &amp; Osteopathic Physicians"], 
+      lookup=cda.codeset.providerCodes.reverse}  
    cda.demographic.address.add{target=AA, street='1002 Healthcare Drive', city='Portland', 
       state='OR', zip='99123', country='US'}  
    cda.demographic.phone.add{target=AA, phone='(555)555-1002', use=cda.codeset.address.Work} 
    local AP = addElement(AA, 'assignedPerson')
    cda.demographic.name.add{target=AP, given='Henry', family='Seven'}
-   
+ 
    return A
 end
 

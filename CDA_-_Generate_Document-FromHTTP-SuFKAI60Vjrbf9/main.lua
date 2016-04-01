@@ -1,4 +1,5 @@
 -- This is an example of generating a NIST compliant C32 CDA document
+
 -- See http://help.interfaceware.com/v6/generate-a-cda-document
 
 local cda = require 'cda'
@@ -96,4 +97,17 @@ function main(Data)
    FillVitalSigns(COM)
    trace(Doc)
    net.http.respond{body=Doc:S(), entity_type='text/xml'}
+
+   -- TEST CODE: write CDA to file (in Iguana install dir)
+   if iguana.isTest() then
+      -- unformatted xml
+      local f = io.open('cda_xml.xml','w+')
+      f:write(tostring(Doc))
+      f:close()
+      -- formatted with xsl stylesheet
+      f = io.open('cda_web.xml','w+')
+      f:write('<?xml-stylesheet type="text/xsl" href="WebViewLayout_CDA.xsl"?>\n')
+      f:write(tostring(Doc))
+      f:close()
+   end   
  end

@@ -1,10 +1,8 @@
-
 local addElement = node.addElement
 local setInner = node.setInner
 local setText = node.setText
 local setAttr = node.setAttr
-
-   
+ 
 function FillServiceEvent(D)
    local addElement = node.addElement   
    local S = addElement(D, 'serviceEvent')
@@ -38,4 +36,3 @@ function FillServiceEvent(D)
       
    return S
 end
-

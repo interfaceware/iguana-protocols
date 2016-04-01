@@ -1,4 +1,3 @@
-
 local addElement = node.addElement
 local setInner = node.setInner
 local setText = node.setText
@@ -355,4 +354,3 @@ function FillFunctionalStatus(T)
    
    return T   
 end
-

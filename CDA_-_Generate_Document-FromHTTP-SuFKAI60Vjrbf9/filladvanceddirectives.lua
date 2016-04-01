@@ -1,4 +1,3 @@
-
 local addElement = node.addElement
 local setInner = node.setInner
 local setText = node.setText
