@@ -25,7 +25,7 @@ local x12ack  = require 'x12.ack.generate'
 function main(Data) 
    local Msg = x12.parse{vmd='x12.vmd', data=Data}
    
-   local Ack, Report, ErrList = x12ack.ack{data=Msg}
+   local Ack, Report, ErrList = x12ack.generate{data=Msg}
    iguana.logInfo(Report)
    iguana.logInfo(Ack)
    

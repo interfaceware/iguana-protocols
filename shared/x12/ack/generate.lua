@@ -359,7 +359,7 @@ local function Validate(n)
    return ReturnCode, R, Errata.ErrorList
 end
 
-function x12ack.ack(T)
+function x12ack.generate(T)
    local Out = x12.message{vmd='TA1.vmd',name='TA1'}
    local InIE = T.data.IE
    Out.ISA = InIE.ISA
@@ -380,5 +380,31 @@ function x12ack.ack(T)
    end     
    return toX12(Out:S()), ErrReport, ErrList
 end
+
+-- Help documentation for jwt.sign
+local X12AckHelp = {
+   Title = "x12ack.generate",
+   Usage = "local Ack, Report, ErrorList = x12ack.generate{data=X12Message}",
+   Desc  = [[
+Attempts to produce an X12 TA1 Acknowledgement based on the passed in X12 message
+which should already be parsed.
+   ]],
+   ParameterTable = true,
+
+   Parameters = {
+      { data = { Desc='Parsed X12 message<u>X12 Message</u>.'}},
+   },
+
+   Returns   = {
+      { Desc = 'TA1 X12 Ack<u>string</u>' },
+      { Desc = 'Report of validation errors <u>string</u>' },
+      { Desc = 'List of validation errors and codes <u>table</u>' },
+   },
+      
+   SeeAlso={{Title="X12 Generate TA1 Acknowledgement", 
+             Link=" http://help.interfaceware.com/v6/x12-generate-ta1-ack"}},
+}
+
+help.set{input_function=x12ack.generate, help_data=X12AckHelp}
 
 return x12ack
