@@ -2,13 +2,13 @@
    name="X12 Generate TA1 Ack"
    guid="3A849D99CFB11BCDE187DFCA32797188"
    description="This example shows how to use Iguana to generate an X12 TA1 Acknowledgment using a visual approach to validation.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/x12-generate-ta1-ack&#xD;&#xA;&#xD;&#xA;It includes a large number of sample transactions with errors to test the validation rules."
-   start_automatically="true"
+   start_automatically="false"
    logging_level="1"
    use_message_filter="false">
    <to_mapper
       guid="X12_Generate_TA1_Ack-To-H5WhqSlyNxmiSl"
-      commit_id="365ecac377a1f6be715e6df8162dd631aab2c14c"
-      commit_comment="First commit">
+      commit_id="5340f9d9bf30e8e3a172c903046eb9928044a16f"
+      commit_comment="Import Translators: X12">
    </to_mapper>
    <from_channel/>
 </channel>
