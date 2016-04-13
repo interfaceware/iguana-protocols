@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="XML_Techniques-To-yvUZJ4Wh4o2exC"
-      commit_id="0c83b88d270e4c90c01bf94c516bb4d08d03821e"
-      commit_comment="Import Translators: Protocols imported.">
+      commit_id="c9db0a632202f22a988b0c322afb9df6b7db7fbe"
+      commit_comment="Added comment.">
    </to_mapper>
    <from_channel/>
 </channel>

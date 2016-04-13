@@ -9,7 +9,7 @@ function MapPatient(PID, X)
    -- the code will work even if the text between the tags is
    -- empty.  We convert the 'node' to a string so we can use
    -- the split function
-   local FullName = X.name:text():S()
+   local FullName = X.name:nodeText()
    
    -- Get rid of multiple white space
    FullName = FullName:compactWS()
@@ -32,12 +32,12 @@ function ProcessPhone(PID, X)
       local Phone = X:child("phone", i)
       -- In case the phone text is not there we use this
       -- helper function
-      if Phone:text():S() == '' then
+      if Phone:nodeText() == '' then
          -- Show usage of setText helper from xml module
          Phone:setText('Unknown')
       end
       
-      local Number = Phone:text()
+      local Number = Phone:nodeText()
       if Phone.type:S() == "home" then
          -- In case the phone number is empty
          PID[13][1][1] = Number

@@ -4,11 +4,7 @@
 
 function MapLab(Msg, X)
    MapPatient(Msg.PATIENT.PID, X.message.patient)
-   local Result = X.message.lab_info:text()
-   
-   -- Let's convert to text
-   Result= Result:S()
-   
+   local Result = X.message.lab_info:nodeText()
    -- Split the lines
    local Lines = Result:split('\n')
    -- Then get rid of white space
