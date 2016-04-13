@@ -5,7 +5,7 @@
 -- in which it is used.
  
 -- General purpose routine to iterate through a message tree and find a segment matching the Filter function given.
-function hl7.findSegment(Msg, Filter)
+local function FindSegment(Msg, Filter)
    local segments = {}
    local cnt = 0
    for i=1, #Msg do
@@ -96,4 +96,6 @@ local hl7_findSegment = {
    }
 }
 
-help.set{input_function=hl7.findSegment, help_data=hl7_findSegment}
+help.set{input_function=FindSegment, help_data=hl7_findSegment}
+
+return FindSegment

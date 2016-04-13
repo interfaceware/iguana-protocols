@@ -1,8 +1,8 @@
--- hl7.findSegment is installed directly into the hl7 namespace
-require 'hl7.findSegment'
+-- Read about the hl7.findSegment function here.
+-- http://help.interfaceware.com/v6/hl7-findsegment
 
--- For more discussion read:
--- http://help.interfaceware.com/code/details/hl7util-lua
+-- Insert function into the hl7 namespace
+hl7.findSegment = require 'hl7.findSegment'
 
 function main(Data)
    local Msg = hl7.parse{vmd='demo.vmd', data=Data}

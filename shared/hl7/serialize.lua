@@ -1,4 +1,5 @@
--- hl7.serialize module - see http://help.interfaceware.com/code/details/hl7-serialize-lua
+-- hl7.serialize module - see 
+-- http://help.interfaceware.com/code/details/hl7-serialize-lua
 
 -- Will search for instances of Pattern in S.
 -- Will call replacement function onUnmatched
@@ -43,7 +44,7 @@ end
 --      an escaped delimiter character, if different from the default
 --      {'F', 'S', 'R', 'E', 'T'}.
 --
-function hl7.serialize(Params)
+local function Serialize(Params)
    Params = Params or {}
    local Msg = Params.data
    local NodeType, ProtocolType = Msg:nodeType()
@@ -122,3 +123,5 @@ function hl7.serialize(Params)
    
    return Serialized
 end
+
+return Serialize

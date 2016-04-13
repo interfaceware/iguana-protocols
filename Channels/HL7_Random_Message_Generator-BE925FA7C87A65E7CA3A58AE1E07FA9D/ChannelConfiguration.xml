@@ -1,7 +1,7 @@
 <channel
    name="HL7 Random Message Generator"
    guid="BE925FA7C87A65E7CA3A58AE1E07FA9D"
-   description="This channel generates a random HL7 ADT message every 10 seconds and then sends it via LLP to localhost:5145.&#xD;&#xA;&#xD;&#xA;Once imported, you can change the IP address, port and content of the generated messages to suit your specific needs."
+   description="This channel generates a random HL7 ADT message every 10 seconds and then sends it via LLP to localhost:5145.&#xD;&#xA;&#xD;&#xA;Once imported, you can change the IP address, port and content of the generated messages to suit your specific needs.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/random-adt-message-generator"
    start_automatically="false"
    logging_level="1"
    use_message_filter="false">
@@ -26,14 +26,14 @@
       connection_lost_reconnect_interval="10000">
       <dequeue_list>
          <dequeue
-            source_guid="00000000000000000000000000000000"
-            dequeue_guid="31A3AE75F570BA3AB4AE0147B54C9671"/>
+            source_name="self"
+            dequeue_guid="3367BF1AB6D88648C86523B3CF4490CE"/>
       </dequeue_list>
    </to_llp_client>
    <from_mapper
       guid="Random_ADT_Message_Generator-From-6lvpNA6tBBa0X5"
-      commit_id="a9bc59da1538a219c4ab53155bc3a4ca19982cd2"
-      commit_comment="Get rid of shared demo dependency."
+      commit_id="b54dc5cd4de955f6c8ceb06a31dae967769fe63a"
+      commit_comment="Better encapsulation."
       poll_time="10000">
    </from_mapper>
 </channel>

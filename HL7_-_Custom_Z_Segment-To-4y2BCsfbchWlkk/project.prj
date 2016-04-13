@@ -1,13 +1,10 @@
 {
     "LocalDependencies": [],
     "LuaDependencies": [
-        "ran"
+        "hl7.zsegment"
     ],
-    "OtherDependencies": [
-        "example/demo.vmd",
-        "random/generator.vmd"
-    ],
-    "timestamp": "1460508463",
+    "OtherDependencies": [],
+    "timestamp": "1460508777",
     "version_info": {
         "build": 0,
         "major": 6,

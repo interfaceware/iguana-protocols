@@ -1,7 +1,7 @@
 <channel
    name="HL7 Custom Delimiters"
    guid="8777F45BC07FD0FC0690055347E23919"
-   description="This channel makes use of hl7.serialize module to generate an HL7 message using custom delimiter characters rather than the standard ones. See:&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/code/details/hl7-serialize-lua"
+   description="This channel makes use of hl7.serialize module to generate an HL7 message using custom delimiter characters rather than the standard ones.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/hl7-serialize"
    start_automatically="false"
    logging_level="1"
    use_message_filter="true">
@@ -26,13 +26,13 @@
       connection_lost_reconnect_interval="10000">
       <dequeue_list>
          <dequeue
-            source_guid="00000000000000000000000000000000"
-            dequeue_guid="45633B2121E41ABD64D2EADD4B245510"/>
+            source_name="self"
+            dequeue_guid="40BA1FCB7A1ACABFA5C82ED31A4D70D4"/>
       </dequeue_list>
    </to_llp_client>
    <from_llp_listener
       ack_vmd_path="/Applications/iNTERFACEWARE-Iguana.app/Contents/iNTERFACEWARE-Iguana/autoack.vmd"
-      port="7009"
+      port="7504"
       connection_timeout="30"
       unlimited_connection_timeout="false"
       ack_style="fast"/>
@@ -45,7 +45,7 @@
       error_handling="0"
       use_translator_filter="true"
       translator_guid="HL7_Custom_Delimiters-Filter-tZiqmriIKj4bkB"
-      translator_commit_id="8a441c6bac55ac1662eaab32ebb1c7f06def816e"
-      translator_commit_comment="Got rid of shared demo.vmd dependency.">
+      translator_commit_id="f53ba5bd2a3bf9c81f2a23cc8287f70b532ecb41"
+      translator_commit_comment="Better structure of HL7 serialize module.">
    </message_filter>
 </channel>

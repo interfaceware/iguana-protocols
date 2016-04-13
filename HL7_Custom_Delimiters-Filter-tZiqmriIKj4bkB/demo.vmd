@@ -84,30 +84,6 @@
             <type>String</type>
          </column>
       </table>
-      <table name="visitinformation">
-         <description>Visit Table</description>
-         <action>1</action>
-         <column name="PatientClass">
-            <description></description>
-            <type>String</type>
-         </column>
-         <column name="AdmitType">
-            <description></description>
-            <type>String</type>
-         </column>
-         <column name="AdmitSource">
-            <description></description>
-            <type>String</type>
-         </column>
-         <column name="HospitalService">
-            <description></description>
-            <type>String</type>
-         </column>
-         <column name="PatientType">
-            <description></description>
-            <type>String</type>
-         </column>
-      </table>
       <message name="ADT">
          <description>Admit/visit notification</description>
          <table_grammar name="ADT">
@@ -119,10 +95,6 @@
             <table_grammar name="kin">
                <type>table</type>
                <table_ref>kin</table_ref>
-            </table_grammar>
-            <table_grammar name="visitinformation">
-               <type>table</type>
-               <table_ref>visitinformation</table_ref>
             </table_grammar>
          </table_grammar>
       </message>
@@ -144,12 +116,6 @@
                <type>table</type>
                <table_ref>kin</table_ref>
             </table_grammar>
-         </table_grammar>
-      </message>
-      <message name="Message1">
-         <description></description>
-         <table_grammar name="Message1">
-            <type>group</type>
          </table_grammar>
       </message>
    </global>
@@ -3008,7 +2974,7 @@
             <composite_ref>ID</composite_ref>
          </field>
          <field>
-            <name>Recorded Date/time2</name>
+            <name>Recorded Date/time</name>
             <max_repeats>0</max_repeats>
             <is_required>True</is_required>
             <width>0</width>
@@ -3067,7 +3033,7 @@
          <description>Message Header</description>
          <has_delimiters>True</has_delimiters>
          <field>
-            <name>FieldSep1</name>
+            <name>FieldSep</name>
             <max_repeats>0</max_repeats>
             <is_required>True</is_required>
             <width>0</width>
@@ -11592,8 +11558,6 @@
       </match>
       <match msg="Lab">
       </match>
-      <match msg="Message1">
-      </match>
       <match msg="Catchall">
       </match>
       <table name="patient">
@@ -11869,57 +11833,6 @@
             </config>
          </column>
       </table>
-      <table name="visitinformation">
-         <config_mapset name="default">
-            <mapset name="Mapset">
-               <node_address>
-               </node_address>
-               <node_address>
-               </node_address>
-               <node_address>
-               </node_address>
-               <node_address>
-               </node_address>
-               <node_address>
-               </node_address>
-            </mapset>
-         </config_mapset>
-         <column name="PatientClass">
-            <config name="default">
-               <is_key>False</is_key>
-               <in_equation><![CDATA[]]></in_equation>
-               <out_equation><![CDATA[]]></out_equation>
-            </config>
-         </column>
-         <column name="AdmitType">
-            <config name="default">
-               <is_key>False</is_key>
-               <in_equation><![CDATA[]]></in_equation>
-               <out_equation><![CDATA[]]></out_equation>
-            </config>
-         </column>
-         <column name="AdmitSource">
-            <config name="default">
-               <is_key>False</is_key>
-               <in_equation><![CDATA[]]></in_equation>
-               <out_equation><![CDATA[]]></out_equation>
-            </config>
-         </column>
-         <column name="HospitalService">
-            <config name="default">
-               <is_key>False</is_key>
-               <in_equation><![CDATA[]]></in_equation>
-               <out_equation><![CDATA[]]></out_equation>
-            </config>
-         </column>
-         <column name="PatientType">
-            <config name="default">
-               <is_key>False</is_key>
-               <in_equation><![CDATA[]]></in_equation>
-               <out_equation><![CDATA[]]></out_equation>
-            </config>
-         </column>
-      </table>
       <message name="ADT">
          <ignore_unknown_segments>True</ignore_unknown_segments>
          <ignore_segment_order>False</ignore_segment_order>
@@ -12171,11 +12084,6 @@
                <mapset_ref>Mapset</mapset_ref>
             </table_grammar>
             <table_grammar name="kin">
-               <type>table</type>
-               <grammar_field_index>-1</grammar_field_index>
-               <mapset_ref>Mapset</mapset_ref>
-            </table_grammar>
-            <table_grammar name="visitinformation">
                <type>table</type>
                <grammar_field_index>-1</grammar_field_index>
                <mapset_ref>Mapset</mapset_ref>
@@ -12542,34 +12450,6 @@
                <grammar_field_index>-1</grammar_field_index>
                <mapset_ref>Mapset</mapset_ref>
             </table_grammar>
-         </table_grammar>
-      </message>
-      <message name="Message1">
-         <ignore_unknown_segments>True</ignore_unknown_segments>
-         <ignore_segment_order>False</ignore_segment_order>
-         <in_equation><![CDATA[]]></in_equation>
-         <out_equation><![CDATA[]]></out_equation>
-         <message_grammar id="0">
-            <name>Message</name>
-            <is_optional>False</is_optional>
-            <is_repeating>False</is_repeating>
-            <ignore_segment_order>False</ignore_segment_order>
-            <max_repeats>0</max_repeats>
-            <type>group</type>
-            <message_grammar id="1">
-               <name>MSH</name>
-               <is_optional>False</is_optional>
-               <is_repeating>False</is_repeating>
-               <ignore_segment_order>False</ignore_segment_order>
-               <max_repeats>0</max_repeats>
-               <type>segment</type>
-               <segment_ref>1</segment_ref>
-            </message_grammar>
-         </message_grammar>
-         <table_grammar name="Message1">
-            <type>group</type>
-            <grammar_field_index>-1</grammar_field_index>
-            <grammar_root_ref>0</grammar_root_ref>
          </table_grammar>
       </message>
       <app_settings>

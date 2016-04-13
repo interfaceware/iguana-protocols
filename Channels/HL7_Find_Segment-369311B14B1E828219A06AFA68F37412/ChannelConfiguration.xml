@@ -1,23 +1,23 @@
 <channel
    name="HL7 Find Segment"
    guid="369311B14B1E828219A06AFA68F37412"
-   description="This shows an example module which can iterate through an HL7 message finding a segment that matches a given criteria using a function supplied by the user.&#xD;&#xA;&#xD;&#xA;"
+   description="This shows an example module which can iterate through an HL7 message finding a segment that matches a given criteria using a function supplied by the user.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/hl7-findsegment"
    start_automatically="false"
    logging_level="1"
    use_message_filter="false">
    <to_mapper
       guid="HL7_Find_Segment-To-qeXyPIdAMosDf4"
-      commit_id="33696bf39be6fb32fd18b8193e29298c445e23c4"
-      commit_comment="Get rid of shared vmd dependency.">
+      commit_id="3204eaa8d35de95229af7648d251c372175a2f2a"
+      commit_comment="Better structure.">
       <dequeue_list>
          <dequeue
-            source_guid="00000000000000000000000000000000"
-            dequeue_guid="E2026A20A9B6B1B9A49E091F09F9E83A"/>
+            source_name="self"
+            dequeue_guid="BD95F0A1E7FA8BA304577058D7370DA9"/>
       </dequeue_list>
    </to_mapper>
    <from_llp_listener
       ack_vmd_path="/Applications/iNTERFACEWARE-Iguana.app/Contents/iNTERFACEWARE-Iguana/autoack.vmd"
-      port="8009"
+      port="7009"
       connection_timeout="30"
       unlimited_connection_timeout="false"
       ack_style="fast"/>
