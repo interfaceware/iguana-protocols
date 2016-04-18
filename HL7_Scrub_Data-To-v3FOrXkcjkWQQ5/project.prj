@@ -1,0 +1,13 @@
+{
+    "LocalDependencies": [],
+    "LuaDependencies": [
+        "hl7.scrub"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1461013758",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

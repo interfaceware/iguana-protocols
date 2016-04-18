@@ -1,0 +1,14 @@
+<channel
+   name="HL7 Scrub Data"
+   guid="28844003879214899391AFCE2B23C438"
+   description="This shows a simple module to scrub data from an HL7 feed.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/hl7-scrub&#xD;&#xA;&#xD;&#xA;This useful if you want to share this data with another party but do not wish to violate patient confidentiality."
+   start_automatically="true"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="HL7_Scrub_Data-To-v3FOrXkcjkWQQ5"
+      commit_id="360818864c32600e97b59e492cd6d3696d3197ba"
+      commit_comment="First commit.">
+   </to_mapper>
+   <from_channel/>
+</channel>
