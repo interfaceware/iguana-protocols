@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="HL7_Scrub_Data-To-v3FOrXkcjkWQQ5"
-      commit_id="2f1b80d28aa48cdf57e2024fa4c10caa3e3a5953"
-      commit_comment="Import Translators: HL7 Scrub">
+      commit_id="a6e9060ec8fca36fb192ef06f3b1845ae60a3ece"
+      commit_comment="Put in more comments and &apos;hydration routine&apos;.">
    </to_mapper>
    <from_channel/>
 </channel>
