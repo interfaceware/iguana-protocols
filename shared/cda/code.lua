@@ -16,14 +16,14 @@ local cdaCodeSetHelp = {
    title="cda.code.set",
    usage=[[cda.code.set{target=<ELEMENT>, system=<CODESYSTEM>, value=<DISPLAYNAME>, lookup=<{LOOKUPTABLE}>}]],
    description=[[Updates an existing code XML element with new values.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The XML element that you wish to update'},
+      [1]={['parameter']='target',['description']='The XML element that you wish to update <u>XML node tree</u>.'},
    },
    optional_parameters={
-      [1]={['parameter']='system',['description']='The OID of the code system'},
-      [2]={['parameter']='value',['description']='The coded value usually obtained from the relevant codeset table'}, 
-      [3]={['parameter']='lookup',['description']='A table to give the display string of the coded value'}, 
+      [1]={['parameter']='system',['description']='The OID of the code system <u>string</u>.'},
+      [2]={['parameter']='value',['description']='The coded value usually obtained from the relevant codeset table <u>string</u>.'}, 
+      [3]={['parameter']='lookup',['description']='A table to give the display string of the coded value <u>table</u>.'}, 
    },
    examples={[[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana"><strong>Note</strong>: In this example, we are updating an XML element named 'CodeElement'.</span></span>
 
@@ -64,16 +64,16 @@ local cdaCodeAddHelp = {
    usage=[[cda.code.add{target=<{PARENT}>, element=<ELEMENT>, system=<CODESYSTEM>, value=<DISPLAYNAME>, lookup=<{LOOKUPTABLE}>, datatype=<CODETYPE>}]],
    description=[[Add a code and its associated code system to identify a specific concept (such as a medication or a family of disorders). 
 Includes a lookup feature that searches tables to set the values of the other arguments. These tables are defined in the cda.codeset module. ]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The specific name of the tag you are creating'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The specific name of the tag you are creating <u>string</u>.'}, 
    },
    optional_parameters={
-      [1]={['parameter']='system',['description']='The OID of the code system. These can be found in the cda.codeset.cat table (defined in the cda.codeset module).'},
-      [2]={['parameter']='value',['description']='The coded value usually obtained from the relevant codeset table'}, 
-      [3]={['parameter']='lookup',['description']='A table to give the display string of the coded value'}, 
-      [4]={['parameter']='datatype',['description']='The type of the data stored in the resulting XML element, typically CD'}, 
+      [1]={['parameter']='system',['description']='The OID of the code system. These can be found in the cda.codeset.cat table (defined in the cda.codeset module) <u>string</u>.'},
+      [2]={['parameter']='value',['description']='The coded value usually obtained from the relevant codeset table <u>string</u>.'}, 
+      [3]={['parameter']='lookup',['description']='A table to give the display string of the coded value <u>table</u>.'}, 
+      [4]={['parameter']='datatype',['description']='The type of the data stored in the resulting XML element, typically CD  <u>string</u>.'}, 
    },
    examples={[[cda.code.add{target=P, element='administrativeGenderCode', system=cda.codeset.cat["HL7 AdministrativeGender"], value=cda.code.sex.Female, lookup=cda.code.sexTable}
 
@@ -98,14 +98,14 @@ local cdaOriginalTextAddHelp = {
    title="cda.code.originalText.add",
    usage="cda.code.originalText.add{target={CODEPARENT}, reference=<text>}",
    description=[[Code elements can have also originalText XML elements embedded within them. This functions adds a text reference to a code element.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>"},
    parameters={
       target='x', 
       reference='x'
    },
    parameters={
-      [1]={['parameter']='target',['description']='The parent code tag under which you wish to add the new element'},
-      [2]={['parameter']='reference',['description']='The ID associated with the human readable element that this element refers to'}, 
+      [1]={['parameter']='target',['description']='The parent code tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='reference',['description']='The ID associated with the human readable element that this element refers to <u>string</u>.'}, 
    },
    examples={[[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana"><strong>Note</strong>: In this example, we are adding text to an XML element named 'CodeElement'.</span></span>
 

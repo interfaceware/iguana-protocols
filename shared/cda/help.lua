@@ -35,8 +35,8 @@ Notice that we use rounded brackets instead of curly braces.<br /><br />
 <strong>Note</strong>: Checking only occurs when you are editing the channel (it is disabled at runtime).]],
    returns={"Nothing"},
    parameters={
-      [1]={['parameter']='func',['description']='Table of parameters from the function call'},
-      [2]={['parameter']='info',['description']='The help information formatted in a Lua table'}, 
+      [1]={['parameter']='func',['description']='Table of parameters from the function call <u>table</u>.'},
+      [2]={['parameter']='info',['description']='The help information formatted in a Lua table <u>table</u>.'}, 
    },
    examples={
 [[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana">
@@ -92,8 +92,8 @@ local cdaHelpSetHelp = {
    description=[[Sets up the help for a function using the simplified help format passed as the second parameter.]],
    returns={"Nothing"},
    parameters={
-      [1]={['parameter']='func',['description']='The name of the function to set the help for'},
-      [2]={['parameter']='info',['description']='The help information formatted in a Lua table'}, 
+      [1]={['parameter']='func',['description']='The name of the function to set the help for <u>function</u>.'},
+      [2]={['parameter']='info',['description']='The help information formatted in a Lua table <u>table</u>.'}, 
    },
    examples={
 [[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana"><strong>This is the help table for cda.dose.add, it uses all the fields and some html formatting</strong>:</span></span>

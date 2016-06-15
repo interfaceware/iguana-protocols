@@ -11,13 +11,13 @@ local cdaTimeAddHelp = {
    usage=[[cda.time.add{target=<{PARENT}>, element=<ELEMENT>, time=<DATETIME>}]],
    description=[[Add a time value to your CDA document. There is no validity check, it is your responsibility to use the correct time format.<br /><br />
 <strong>Note</strong>: The time zone defaults to UTC (GMT), to change zone you just add an increment/decrement, e.g., +500 for EST.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The specific name of the tag you are creating'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The specific name of the tag you are creating <u>string</u>.'}, 
    },
    optional_parameters={
-      [1]={['parameter']='time',['description']='A valid date-time string'},
+      [1]={['parameter']='time',['description']='A valid date-time string <u>string</u>.'},
    },
    examples={[[<strong>Note: In this example we are using EST (+500)</strong>
 
@@ -41,12 +41,12 @@ local cdaTimeSetHelp = {
    usage=[[cda.time.set{target=<{ELEMENT}>, time=<DATETIME>}]],
    description=[[Update a time value to your CDA document. There is no validity check, it is your responsibility to use the correct time format.<br /><br />
 <strong>Note</strong>: The time zone defaults to UTC (GMT), to change zone you just add an increment/decrement, e.g., +500 for EST.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The XML element that you wish to update'},
+      [1]={['parameter']='target',['description']='The XML element that you wish to update <u>XML node tree</u>.'},
    },
    optional_parameters={
-      [1]={['parameter']='time',['description']='A valid date-time string'},
+      [1]={['parameter']='time',['description']='A valid date-time string <u>string</u>.'},
    },
    examples={[[<strong>Note: In this example we are using EST (+500)</strong>
 
@@ -78,10 +78,10 @@ cda.time.add{target=TimeRange, element=<HIGH>, time=<DATETIME>}]],
    description=[[To create a time interval, you must first create the interval root element. Then you can add the sub-elements defining the interval range. 
 There is no validity check, it is your responsibility to use the correct time format.<br /><br />
 <strong>Note</strong>: The time zone defaults to UTC (GMT), to change zone you just add an increment/decrement, e.g., +500 for EST.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The specific name of the tag you are creating'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The specific name of the tag you are creating <u>string</u>.'}, 
    },
    examples={[[<strong>Note: In this example we are using EST (+500)</strong>
 
@@ -111,12 +111,12 @@ local cdaTimePeriodAddHelp = {
    title="cda.timeperiod.add",
    usage=[[cda.timeperiod.add(target=<{PARENT}>, element=<ELEMENT>, period=<PERIOD>, unit=<UNIT>}]],
    description=[[Add a specific time period to your CDA document. ]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The specific name of the tag you are creating'}, 
-      [3]={['parameter']='period',['description']='The period of time you wish to add'},
-      [4]={['parameter']='unit',['description']='The time period unit'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The specific name of the tag you are creating <u>string</u>.'}, 
+      [3]={['parameter']='period',['description']='The period of time you wish to add <u>string</u>.'},
+      [4]={['parameter']='unit',['description']='The time period unit <u>string</u>.'}, 
    },
    examples={[[cda.timeperiod.add{target={PARENT}, element='effectiveTime', period='6', unit='h'}
       

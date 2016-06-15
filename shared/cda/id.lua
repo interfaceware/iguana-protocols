@@ -11,13 +11,13 @@ local cdaIdAddHelp = {
    usage=[[cda.id.add{target=<{PARENT}>, value=<EXTENSION>, id_type=<ROOT>} ]],
    description=[[A RIM class may have an associated ID value that you will need to include in your document.<br /><br />
 <strong>Note</strong>: Predefined root values used in the id_type argument can be found in the cda.codeset.templates table.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
    },
    optional_parameters={
-      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID'}, 
-      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID'},
+      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID <u>string</u>.'}, 
+      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID <u>string</u>.'},
    },
    examples={[[cda.id.add{target={PARENT}, value='998991', id_type=cda.codeset.cat.HL7ExampleOid}
 
@@ -46,13 +46,13 @@ local cdaIdSetHelp = {
    title="cda.id.set",
    usage=[[cda.id.set{target=<{ELEMENT}>, value=<EXTENSION>, id_type=<ROOT>} ]],
    description=[[CHANGE DESCRIPTION]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The element to be updated'},
+      [1]={['parameter']='target',['description']='The element to be updated <u>XML node tree</u>.'},
    },
    optional_parameters={
-      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID'},
-      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID'},
+      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID <u>string</u>.'},
+      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID <u>string</u>.'},
    },
    examples={[[CHANGE EXAMPLES]]}
 }
@@ -78,13 +78,13 @@ local cdaIdTemplateAddHelp = {
    usage=[[cda.id.template.add{target=<{PARENT}>, value=<EXTENSION>, id_type=<ROOT>}]],
    description=[[CDA documents are made up of a collection of templates that describe a particular actor or event. Every template has an associated template ID.<br /><br />
 <strong>Note</strong>: Predefined root values used in the id_type argument can be found in the cda.codeset.templates table.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element. The templateID tag is inserted into position 1.'},
-      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element (The templateID tag is inserted into position 1) <u>XML node tree</u>.'},
+      [2]={['parameter']='id_type',['description']='The root identifier (object ID) of the desired ID <u>string</u>.'}, 
    },
    optional_parameters={
-      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID'},
+      [1]={['parameter']='value',['description']='The extension (or specific value) of the ID <u>string</u>.'},
    },
    examples={[[cda.id.template.add{target={PARENT}, id_type=cda.codeset.templates.Assessment}
 

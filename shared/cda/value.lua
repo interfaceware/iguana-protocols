@@ -15,15 +15,15 @@ cda.value.add{target=<{PARENT}>, element=<ELEMENT>, datatype=<[INT | REAL]>, val
 cda.value.add{target=<{PARENT}>, element=<ELEMENT>, datatype='PQ', value=<VALUE>, unit=<UNIT>}]],
    description=[[Add integers, fractions or measurement ("PQ" values) to your CDA document.<br /><br />   
 <strong>Note</strong>: To create a PQ value you must add a unit argument and specify "PQ" as the datatype.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The element with the value attribute'}, 
-      [3]={['parameter']='datatype',['description']='Type of data stored in element (INT, REAL or "PQ" type)'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The element with the value attribute <u>string</u>.'}, 
+      [3]={['parameter']='datatype',['description']='Type of data stored in element (INT, REAL or "PQ" type) <u>string</u>.'}, 
    },
    optional_parameters={
-      [1]={['parameter']='value',['description']='The actual value'},
-      [2]={['parameter']='unit',['description']='The unit of measurement'}, 
+      [1]={['parameter']='value',['description']='The actual value <u>string</u>.'},
+      [2]={['parameter']='unit',['description']='The unit of measurement <u>string</u>.'}, 
    },
    examples={[[cda.value.add{target={PARENT}, element='value', datatype='INT', value='7'}
 
@@ -67,16 +67,16 @@ you must first create the interval root element, then add the sub-elements defin
 Essentially, you are adding a value XML element that encapsulates a value range.<br /><br />
 <strong>Note</strong>: Intervals have a datatype of "IVL_*" (where * is replaced by the subtype that makes up the interval). 
 For example, if an interval is made of PQ subtypes, then the type of the interval is 'IVL_PQ'.]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
       target='', 
       element='',
       datatype=''
    },
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The element with the value attribute'}, 
-      [3]={['parameter']='datatype',['description']='Type of data stored in element (in this case, IVL_*)'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The element with the value attribute <u>string</u>.'}, 
+      [3]={['parameter']='datatype',['description']='Type of data stored in element (in this case, IVL_*) <u>string</u>.'}, 
    },
    examples={[[local Range = cda.valuerange.add{target={PARENT}, element='value', datatype='IVL_PQ'}
 -- use cda.value.add{} to add the values for the Range
@@ -110,14 +110,14 @@ local cdaValueStringAddHelp = {
    usage=[[cda.util.valuestring.add{target=<{PARENT}>, string=<VALUE>}]],
    description=[[Add a value XML element with inner content represented by text.<br /><br />
 <strong>Note</strong>: A "value" element is added by default and its type is set to "ST".]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
       target='', 
       string=''
    },
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='string',['description']='The inner content of the value'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='string',['description']='The inner content of the value <u>string</u>.'}, 
    },
    examples={[[cda.util.valuestring.add{target={PARENT}, value='1 pack per day'}
 

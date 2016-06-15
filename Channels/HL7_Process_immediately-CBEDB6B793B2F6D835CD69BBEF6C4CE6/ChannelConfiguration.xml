@@ -1,0 +1,31 @@
+<channel
+   name="HL7: Process immediately"
+   guid="CBEDB6B793B2F6D835CD69BBEF6C4CE6"
+   description="This channel shows how one can make an HL7 listener interface which does not queue messages.&#xD;&#xA;&#xD;&#xA;The message processing needs to happen inside the LLP translator script before the ACKnowledgement message is sent.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/hl7-process-immediately"
+   start_automatically="true"
+   logging_level="0"
+   use_message_filter="true">
+   <to_channel>
+   </to_channel>
+   <from_llp_listener
+      ack_vmd_path="/Applications/iNTERFACEWARE-Iguana.app/Contents/iNTERFACEWARE-Iguana/autoack.vmd"
+      port="5345"
+      connection_timeout="30"
+      unlimited_connection_timeout="false"
+      ack_style="trans"
+      ack_script="HL7_Process_immediately-Ack-NEe8p01j239Liz"
+      ack_commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      ack_commit_comment="Import Translators: Next import of channels from Julian."/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true"
+      translator_guid="HL7_Process_immediately-Filter-R3sOhNhT7cxXJK"
+      translator_commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      translator_commit_comment="Import Translators: Next import of channels from Julian.">
+   </message_filter>
+</channel>

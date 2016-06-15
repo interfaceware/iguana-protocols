@@ -26,14 +26,14 @@ local cdaNullSetHelp = {
    description=[[Set the 'nullFlavour' for a missing required element. Notice that we use rounded brackets instead of curly braces.<br /><br />
 <strong>Note</strong>: This function removes all children, including attributes and sub-elements, and replaces them with the 'nullFlavor' attribute. 
 The only exception is the "xsi:type" attribute found in 'value' elements.  Those must remain to ensure NIST validation. ]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
       element='',
       nullFlavor=""
    },
    parameters={
-      [1]={['parameter']='element',['description']='The element to which null will be applied'},
-      [2]={['parameter']='nullFlavor',['description']="The type of null. The module's table provides the possible values"}, 
+      [1]={['parameter']='element',['description']='The element to which null will be applied <u>XML node tree</u>.'},
+      [2]={['parameter']='nullFlavor',['description']="The type of null. The module's table provides the possible values <u>string</u>."}, 
    },
    examples={[[As an example, suppose we had the following XML element:
 

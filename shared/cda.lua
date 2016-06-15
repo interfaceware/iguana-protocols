@@ -1,3 +1,8 @@
+-- This module contains CDA schema templates and functions useful 
+-- for generating NIST compliant C32 CDA documents
+
+-- See http://help.interfaceware.com/v6/generate-a-cda-document
+
 cda = {}
 
 require 'cda.help'
@@ -43,7 +48,7 @@ local cdaNewHelp = {
    title="cda.new",
    usage=[[cda.new()]],
    description=[[Creates a new, empty CDA document.]],
-   returns={"An empty cda document with a near-complete header"},
+   returns={"An empty cda document with a near-complete header <u>XML node tree</u>."},
    parameters={},
    examples={[[local Doc = cda.new()
 
@@ -76,7 +81,7 @@ local cdaNewMinHelp = {
    title="cda.newMin",
    usage=[[cda.newMin()]],
    description=[[Creates a new, empty minimal CDA document.]],
-   returns={"An empty cda document with a minimal header"},
+   returns={"An empty cda document with a minimal header <u>XML node tree</u>."},
    parameters={},
    examples={[[local Doc = cda.newMin()
 

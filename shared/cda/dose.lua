@@ -8,7 +8,7 @@ local cdaDoseAddHelp = {
    usage=[[cda.dose.add{target=<{PARENT}>, element=<ELEMENT>, numerator=<NUMERATOR>, denominator=<DENOMINATOR>}]],
    description=[[Add dosage information to your CDA document.<br /><br />
 <strong>Note</strong>: Both the numerator and denominator are optional fields. If they are not provided, they are replaced by the nullFlavor “UNK” (meaning "unknown").]],
-   returns={"A parsed tree representing the populated XML element"},
+   returns={"A parsed tree representing the populated XML element <u>XML node tree</u>."},
    parameters={
       target='', 
       element=''
@@ -18,12 +18,12 @@ local cdaDoseAddHelp = {
       denominator='The denominator portion of the dose value'
    },
    parameters={
-      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element'},
-      [2]={['parameter']='element',['description']='The specific name of the tag you are creating'}, 
+      [1]={['parameter']='target',['description']='The parent tag under which you wish to add the new element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The specific name of the tag you are creating <u>string</u>.'}, 
    },
    optional_parameters={
-      [1]={['parameter']='numerator',['description']='The numerator portion of the dose value'},
-      [2]={['parameter']='denominator',['description']='The denominator portion of the dose value'}, 
+      [1]={['parameter']='numerator',['description']='The numerator portion of the dose value <u>string</u>.'},
+      [2]={['parameter']='denominator',['description']='The denominator portion of the dose value <u>string</u>.'}, 
    },
    examples={[[cda.dose.add{target={PARENT}, element='maxDoseQuantity', numerator='12', denominator='35'}
 

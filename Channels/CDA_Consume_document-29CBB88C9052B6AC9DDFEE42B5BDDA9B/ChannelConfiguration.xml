@@ -1,0 +1,14 @@
+<channel
+   name="CDA: Consume document"
+   guid="29CBB88C9052B6AC9DDFEE42B5BDDA9B"
+   description="This example shows how to use the builtin xml.parse{} function to parse and consume a CDA document.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/consume-a-cda"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="CDA_Consume_document-To-S2yoMMYDyDyrNO"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian.">
+   </to_mapper>
+   <from_channel/>
+</channel>

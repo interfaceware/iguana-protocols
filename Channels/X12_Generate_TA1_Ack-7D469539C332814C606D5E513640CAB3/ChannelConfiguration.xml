@@ -1,0 +1,14 @@
+<channel
+   name="X12: Generate TA1 Ack"
+   guid="7D469539C332814C606D5E513640CAB3"
+   description="This example shows how to use Iguana to generate an X12 TA1 Acknowledgment using a visual approach to validation.&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/x12-generate-ta1-ack&#xD;&#xA;&#xD;&#xA;It includes a large number of sample transactions with errors to test the validation rules."
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="X12_Generate_TA1_Ack-To-doFvpkwYziDpQP"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian.">
+   </to_mapper>
+   <from_channel/>
+</channel>

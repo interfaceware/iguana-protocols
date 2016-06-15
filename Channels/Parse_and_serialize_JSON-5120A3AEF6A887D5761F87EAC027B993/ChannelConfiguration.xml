@@ -1,0 +1,16 @@
+<channel
+   name="Parse and serialize JSON"
+   guid="5120A3AEF6A887D5761F87EAC027B993"
+   description="How to parse and serialize JSON, using json.parse{} and json.serialize{}&#xD;&#xA;&#xD;&#xA;See http://help.interfaceware.com/v6/parse-and-serialize-json"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="Parse_and_serialize_JSON-From-QOItb3S2DduEkz"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian."
+      poll_time="10000">
+   </from_mapper>
+</channel>

@@ -1,0 +1,17 @@
+{
+    "LocalDependencies": [
+        "TA1.vmd",
+        "x12.vmd"
+    ],
+    "LuaDependencies": [
+        "codemap",
+        "x12.ack.generate"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1466020363",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

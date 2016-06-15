@@ -1,4 +1,5 @@
-local batch = {} 
+-- http://help.interfaceware.com/v6/hl7-split-up-batch-file
+
 
 -- Helper functions
 
@@ -21,7 +22,7 @@ local function ExtractMessage(Segments, StartIndex, CurrentIndex, Messages)
 end
 
 -- Public API of module --
-function batch.split(Data)
+local function split(Data)
    -- takes HL7 Batch data, including Headers
    -- returns List of Headers, and nested List of Batches of HL7 messages
    local Messages = {}
@@ -50,19 +51,29 @@ end
 
 local HELP_DEF=[[{
 "Desc": "Splits an 'HL7 Batch Message' or 'Batch of HL7 messages' and extracts segments which it returns in Lua tables.",
-"Returns": [{"Desc": "For 'HL7 Batch Message' it returns a table with all the HL7 messages from the batch in it.<u>table</u>."}],
+"Returns": [{"Desc": "For 'HL7 Batch Message' it returns a table with all the HL7 messages from the batch in it <u>table</u>."}],
 "SummaryLine": "Splits an 'HL7 Batch Message' or 'Batch of HL7 messages'.",
-"SeeAlso": [],
+"SeeAlso": [
+      {
+         'Title':"HL7: Split up batch file",
+         'Link':"http://help.interfaceware.com/v6/hl7-split-up-batch-file"
+      },
+      {
+         'Title':"Source code for the hl7.batch.lua module on github",
+         'Link':"https://github.com/interfaceware/iguana-protocols/blob/master/shared/hl7/batch.lua"
+      }
+],
 "Title": "batch.split",
 "Usage": "batch.split(Data)",
 "Parameters": [{"Data": {"Desc": "HL7 Batch Message to be parsed or Batch of HL7 messages to be parsed <u>string</u>."}}],
 "Examples": [
-"<pre>local Messages = batch.split(Data)</pre>"
+"<pre>-- split a batch of HL7 messages
+local Messages = batch.split(Data)</pre>"
 ],
 "ParameterTable": false
 }]]
 
-help.set{input_function=batch.split, help_data=json.parse{data=HELP_DEF}}
+help.set{input_function=split, help_data=json.parse{data=HELP_DEF}}
 
 
-return batch
+return split

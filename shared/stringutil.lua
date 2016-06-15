@@ -16,6 +16,9 @@
 -- a result this version of stringutils does less than previous versions.
 
 -- Trims white space on both sides.
+
+-- http://help.interfaceware.com/v6/stringutil-string-functions
+
 if not string.trimWS then
    string.trimWS = function (self)
       return self:match('^%s*(.-)%s*$')
@@ -44,11 +47,11 @@ if not string.trimWS then
       };
       SeeAlso={
          {
-            Title="stringutil.lua - in our code repository.",
-            Link="http://help.interfaceware.com/code/details/stringutil-lua"
+            Title="stringutil.lua on github",
+            Link="https://github.com/interfaceware/iguana-tools/blob/master/shared/stringutil.lua"
          },
          {
-            Title="Stringutil – string functions ",
+            Title="String Manipulation Extensions",
             Link="http://help.interfaceware.com/v6/stringutil-string-functions"
          }
       }
@@ -86,11 +89,11 @@ if not string.trimRWS then
       };
       SeeAlso={
          {
-            Title="stringutil.lua - in our code repository.",
-            Link="http://help.interfaceware.com/code/details/stringutil-lua"
+            Title="stringutil.lua on github",
+            Link="https://github.com/interfaceware/iguana-tools/blob/master/shared/stringutil.lua"
          },
          {
-            Title="Stringutil – string functions ",
+            Title="String Manipulation Extensions",
             Link="http://help.interfaceware.com/v6/stringutil-string-functions"
          }
       }
@@ -128,11 +131,11 @@ if not string.trimLWS then
       };
       SeeAlso={
          {
-            Title="stringutil.lua - in our code repository.",
-            Link="http://help.interfaceware.com/code/details/stringutil-lua"
+            Title="stringutil.lua on github",
+            Link="https://github.com/interfaceware/iguana-tools/blob/master/shared/stringutil.lua"
          },
          {
-            Title="Stringutil – string functions ",
+            Title="String Manipulation Extensions",
             Link="http://help.interfaceware.com/v6/stringutil-string-functions"
          }
       }
@@ -170,11 +173,11 @@ if not string.compactWS then
       };
       SeeAlso={
          {
-            Title="stringutil.lua - in our code repository.",
-            Link="http://help.interfaceware.com/code/details/stringutil-lua"
+            Title="stringutil.lua on github",
+            Link="https://github.com/interfaceware/iguana-tools/blob/master/shared/stringutil.lua"
          },
          {
-            Title="Stringutil – string functions ",
+            Title="String Manipulation Extensions",
             Link="http://help.interfaceware.com/v6/stringutil-string-functions"
          }
       }
@@ -214,11 +217,11 @@ if not string.capitalize then
       };
       SeeAlso={
          {
-            Title="stringutil.lua - in our code repository.",
-            Link="http://help.interfaceware.com/code/details/stringutil-lua"
+            Title="stringutil.lua on github",
+            Link="https://github.com/interfaceware/iguana-tools/blob/master/shared/stringutil.lua"
          },
          {
-            Title="Stringutil – string functions ",
+            Title="String Manipulation Extensions",
             Link="http://help.interfaceware.com/v6/stringutil-string-functions"
          }
       }
@@ -228,7 +231,7 @@ end
 
 -- This helper function takes the name of a string function and makes an equivalent node function
 -- If it can get the help then it gets that too.
-function MakeNodeAlias(Name)
+local function MakeNodeAlias(Name)
    if node[Name] then return end -- Function exists
    local Func = string[Name]
    trace(Func)
@@ -242,7 +245,7 @@ function MakeNodeAlias(Name)
    end
 end
 
-function MakeNodeAlias1(Name)
+local function MakeNodeAlias1(Name)
    if node[Name] then return end -- Function exists
    local Func = string[Name]
    trace(Func)
@@ -256,7 +259,7 @@ function MakeNodeAlias1(Name)
    end
 end
 
-function MakeNodeAlias2(Name)
+local function MakeNodeAlias2(Name)
    if node[Name] then return end -- Function exists
    local Func = string[Name]
    trace(Func)
@@ -274,7 +277,7 @@ function MakeNodeAlias2(Name)
    end
 end
 
-function MakeNodeAlias3(Name)
+local function MakeNodeAlias3(Name)
    if node[Name] then return end -- Function exists
    local Func = string[Name]
    trace(Func)
@@ -311,7 +314,7 @@ end
 
 -- We make node tree aliases of some of the more useful string functions
 -- This means we don't need to cast to a string using :S() or tostring() before we use the function.
-function Init()
+local function Init()
    MakeNodeAlias('trimWS')
    MakeNodeAlias('trimRWS')
    MakeNodeAlias('trimLWS')

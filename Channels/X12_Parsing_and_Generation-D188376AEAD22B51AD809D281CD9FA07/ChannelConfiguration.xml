@@ -1,0 +1,14 @@
+<channel
+   name="X12: Parsing and Generation"
+   guid="D188376AEAD22B51AD809D281CD9FA07"
+   description="This shows a simple example of parsing and generating an X12 transaction using Iguana.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/x12-parse-and-generate&#xD;&#xA;&#xD;&#xA;In this case the example is parsing a 270 claim and generating a 271 response."
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="X12_Parsing_and_Generation-To-iaionvL8XmBgpi"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian.">
+   </to_mapper>
+   <from_channel/>
+</channel>

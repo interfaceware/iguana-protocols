@@ -1,8 +1,6 @@
 -- Generic Z segment parser
 -- http://help.interfaceware.com/kb/generic-z-segment-parser
 
-hl7.zsegment = {}
-
 local function ParseDelim(Data, DelimArray, Index, Compact)
    if Index == 0 then
       return Data
@@ -36,7 +34,7 @@ local function AddZSegment(List, Segment, Compact)
    List[SegmentName][#List[SegmentName]+1] = Fields
 end
 
-function hl7.zsegment.parse(T)
+local function ParseZSegment(T)
    local Segments = T.data:split("\r")
    local ZSegments = {}
    for i = 1,#Segments do
@@ -61,7 +59,7 @@ local HELP_DEF=[[{
          "Desc": "A lua table with the Z segments parsed out <u>table</u>."
       }
    ],
-   "SummaryLine": "Parses an HL7/EDI/X12 message for Z-zegments without a vmd.",
+   "SummaryLine": "Parses an HL7 message for Z-zegments without a vmd.",
    "SeeAlso": [
       {
          "Title": "hl7.zsegment.lua.",
@@ -72,8 +70,8 @@ local HELP_DEF=[[{
          "Link": "http://help.interfaceware.com/kb/generic-z-segment-parser"
       }
    ],
-   "Title": "hl7.zsegment.parse",
-   "Usage": "hl7.zsegment.parse{data=&#60;value&#62;, compact=&#60;true|false&#62;}",
+   "Title": "hl7.parseZSegment",
+   "Usage": "hl7.parseZSegment{data=&#60;value&#62;, compact=&#60;true|false&#62;}",
    "Parameters": [
       {
          "data": {
@@ -87,10 +85,12 @@ local HELP_DEF=[[{
       }
    ],
    "Examples": [
-      "<pre>local Msg = hl7.zsegment.parse{data=Data, compact=false}</pre>"
+      "<pre>hl7.parseZSegment = require 'hl7.zsegment.parse'
+local Msg = hl7.parseZSegment{data=Data, compact=false}</pre>"
    ],
    "ParameterTable": true
 }]]
 
-help.set{input_function=hl7.zsegment.parse, help_data=json.parse{data=HELP_DEF}}   
+help.set{input_function=ParseZSegment, help_data=json.parse{data=HELP_DEF}}   
 
+return ParseZSegment

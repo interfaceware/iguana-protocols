@@ -1,0 +1,46 @@
+{
+    "LocalDependencies": [
+        "filladvanceddirectives.lua",
+        "fillallergies.lua",
+        "fillassessment.lua",
+        "fillencounters.lua",
+        "fillfamilyhistory.lua",
+        "fillfunctionalstatus.lua",
+        "fillheader.lua",
+        "fillimmunizations.lua",
+        "fillinterventions.lua",
+        "fillmedicalequipment.lua",
+        "fillmedications.lua",
+        "fillpatient.lua",
+        "fillpayers.lua",
+        "fillplanofcare.lua",
+        "fillproblemlist.lua",
+        "fillprocedures.lua",
+        "fillresults.lua",
+        "fillserviceevent.lua",
+        "fillsocialhistory.lua",
+        "fillstakeholders.lua",
+        "fillvitalsigns.lua"
+    ],
+    "LuaDependencies": [
+        "cda",
+        "cda.code",
+        "cda.code.simple",
+        "cda.codeset",
+        "cda.demographic",
+        "cda.dose",
+        "cda.help",
+        "cda.id",
+        "cda.null",
+        "cda.time",
+        "cda.value",
+        "cda.xml"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1466020363",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

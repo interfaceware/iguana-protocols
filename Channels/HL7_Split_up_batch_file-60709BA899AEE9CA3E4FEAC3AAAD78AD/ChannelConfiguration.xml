@@ -1,0 +1,25 @@
+<channel
+   name="HL7: Split up batch file"
+   guid="60709BA899AEE9CA3E4FEAC3AAAD78AD"
+   description="This example shows a simple module for reading in a batch of HL7 messages.&#xD;&#xA;&#xD;&#xA;It ignores the file and batch header segments and collects up the messages.&#xD;&#xA;"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_mapper
+      guid="HL7_Split_up_batch_file-From-fskh5HCsVSfS2q"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian."
+      poll_time="10000">
+   </from_mapper>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

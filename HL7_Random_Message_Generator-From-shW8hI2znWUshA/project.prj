@@ -1,0 +1,16 @@
+{
+    "LocalDependencies": [],
+    "LuaDependencies": [
+        "ran"
+    ],
+    "OtherDependencies": [
+        "example/demo.vmd",
+        "random/generator.vmd"
+    ],
+    "timestamp": "1466020363",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

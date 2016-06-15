@@ -18,8 +18,8 @@ local nodeSetTextHelp = {
 If a text element does not exist it is appended to the parent element.]],
    returns={"Nothing"},
    parameters={
-      [1]={['parameter']='target',['description']='Element to set the text for'},
-      [2]={['parameter']='value',['description']='Text string value for the element'}, 
+      [1]={['parameter']='target',['description']='Element to set the text for <u>XML node tree</u>.'},
+      [2]={['parameter']='value',['description']='Text string value for the element <u>string</u>.'}, 
    },
    examples={[[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana">
 <strong>Note</strong>: A variable "setText" is used as a shorthand, to make the call more concise (this is created at the start of each module).
@@ -59,11 +59,11 @@ local nodeSetAttrHelp = {
    usage=[[node.setAttr(<TARGET: PARENT XML ELEMENT>, <ATTRIBUTE>, <VALUE: TEXT STRING>)]],
    description=[[Sets the named attribute to a specified value. If a the specified attribute does not exist it is appended to the parent element. 
 Notice that we use rounded brackets instead of curly braces.]],
-   returns={"The updated parent element"},
+   returns={"The updated parent element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent element'},
-      [2]={['parameter']='attribute',['description']='The name of the attribute to set'}, 
-      [3]={['parameter']='value',['description']='Text string value for the attribute'}, 
+      [1]={['parameter']='target',['description']='The parent element <u>XML node tree</u>.'},
+      [2]={['parameter']='attribute',['description']='The name of the attribute to set <u>string</u>.'}, 
+      [3]={['parameter']='value',['description']='Text string value for the attribute <u>string</u>.'}, 
    },
    examples={[[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana">
 <strong>Note</strong>: A variable "setAttr" is used as a shorthand, to make the call more concise (this is created at the start of each module).
@@ -111,10 +111,10 @@ local xmlFindElementHelp = {
    description=[[Find the first element of the specified name in the target. If the target is a tree, it will do a depth-first search of tree. 
 Notice that we use rounded brackets instead of curly braces.<br /><br />   
 <strong>Note</strong>: If there are multiple elements with the same name this function will only find the first one.]],
-   returns={"The first element found that matches the name specified"},
+   returns={"The first element found that matches the name specified <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='Element to search within'},
-      [2]={['parameter']='element',['description']='The name of the element to search for'}, 
+      [1]={['parameter']='target',['description']='Element to search within <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The name of the element to search for <u>string</u>.'}, 
    },
    examples={[[xml.findElement(G,'guardianPerson')]]}
 }
@@ -136,10 +136,10 @@ local nodeAddElementHelp = {
    title="node.addElement",
    usage=[[node.addElement{target=<PARENT XML ELEMENT>, element=<ELEMENT NAME>]],
    description=[[Appends an empty named element to the parent element. Notice that we use rounded brackets instead of curly braces.]],
-   returns={"The appended element"},
+   returns={"The appended element <u>XML node tree</u>."},
    parameters={
-      [1]={['parameter']='target',['description']='The parent element'},
-      [2]={['parameter']='element',['description']='The name of the element to append'}, 
+      [1]={['parameter']='target',['description']='The parent element <u>XML node tree</u>.'},
+      [2]={['parameter']='element',['description']='The name of the element to append <u>string</u>.'}, 
    },
    examples={[[<span style="font-size:12px;line-height:12px;"><span style="font-family:verdana">
 <strong>Note</strong>: A variable "addElement" is used as a shorthand, to make the call more concise (this is created at the start of each module).

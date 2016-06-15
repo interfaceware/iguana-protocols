@@ -1,0 +1,17 @@
+{
+    "LocalDependencies": [
+        "RehydrateData.lua",
+        "demo.vmd"
+    ],
+    "LuaDependencies": [
+        "hl7.findSegment",
+        "hl7.scrub"
+    ],
+    "OtherDependencies": [],
+    "timestamp": "1466020363",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

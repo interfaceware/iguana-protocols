@@ -1,0 +1,938 @@
+<engine version="1.0">
+   <strict_grammar_checking>False</strict_grammar_checking>
+   <java_use_native_double>False</java_use_native_double>
+   <use_passthrough_mapping>True</use_passthrough_mapping>
+   <current_config>0</current_config>
+   <incoming_config>0</incoming_config>
+   <outgoing_config>0</outgoing_config>
+   <vmd_description></vmd_description>
+   <use_dotnet_properties>True</use_dotnet_properties>
+   <global name="global">
+      <message name="TA1">
+         <description>Eligibility, Coverage or Benefit Inquiry</description>
+         <table_grammar name="TA1">
+            <type>group</type>
+         </table_grammar>
+      </message>
+   </global>
+   <config name="default">
+      <composite name="AN">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="ID">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="TM">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="DT">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="C040">
+         <description>Reference Identifier</description>
+         <field>
+            <name>Reference Identification Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Reference Identification</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Reference Identification Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Reference Identification</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Reference Identification Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Reference Identification</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+      </composite>
+      <composite name="C035">
+         <description>Provider Specialty Information</description>
+         <field>
+            <name>Provider Specialty Code</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Agency Qualifier Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Yes/No Condition or Response Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="R">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="N0">
+         <description></description>
+         <field>
+            <name>Value</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="C003_SEGEQ_S130_A4_R02">
+         <description>Composite Medical Procedure Identifier SEGEQ S130 A4 R02</description>
+         <field>
+            <name>Product/Service ID Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Product/Service ID</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Not Used</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+      </composite>
+      <composite name="C001">
+         <description>Composite Unit of Measure</description>
+         <field>
+            <name>Unit or Basis for Measurement Code</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Exponent</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Multiplier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Unit or Basis for Measurement Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Exponent</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Multiplier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Unit or Basis for Measurement Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Exponent</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Multiplier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Unit or Basis for Measurement Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Exponent</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Multiplier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Unit or Basis for Measurement Code</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Exponent</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+         <field>
+            <name>Multiplier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>R</composite_ref>
+         </field>
+      </composite>
+      <composite name="C003_SEGEQ_S130_A5_R02">
+         <description>Composite Medical Procedure Identifier SEGEQ S130 A5 R02</description>
+         <field>
+            <name>Product/Service ID Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Product/Service ID</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Not Used</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+      </composite>
+      <composite name="C003_SEGEB_S130_A4_R13">
+         <description>Composite Medical Procedure Identifier SEGEB S130 A4 R13</description>
+         <field>
+            <name>Product/Service ID Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Product/Service ID</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Not Used</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+      </composite>
+      <composite name="C003_SEGEB_S130_A5_R13">
+         <description>Composite Medical Procedure Identifier SEGEB S130 A5 R13</description>
+         <field>
+            <name>Product/Service ID Qualifier</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Product/Service ID</name>
+            <max_length>0</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Procedure Modifier</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <field>
+            <name>Not Used</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>AN</composite_ref>
+         </field>
+      </composite>
+      <segment id="0">
+         <name>ST</name>
+         <description>Transaction Set Header S010 A1</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Transaction Set Identifier Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>0</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Transaction Set Control Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>0</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <identity>
+            <value>(270)</value>
+            <node_address>
+               <pair>
+                  <node_index>0</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+            </node_address>
+         </identity>
+      </segment>
+      <segment id="1">
+         <name>ST</name>
+         <description>Transaction Set Header S010 A1</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Transaction Set Identifier Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>0</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Transaction Set Control Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>0</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>AN</composite_ref>
+         </field>
+         <identity>
+            <value>(271)</value>
+            <node_address>
+               <pair>
+                  <node_index>0</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+            </node_address>
+         </identity>
+      </segment>
+      <segment id="2">
+         <name>IEA</name>
+         <description>INTERCHANGE CONTROL TRAILER</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Number of Included Functional Groups</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>N0</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Control Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>N0</composite_ref>
+         </field>
+      </segment>
+      <segment id="3">
+         <name>TA1</name>
+         <description>Interchange Acknowledgment</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Interchange Control Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>N0</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Date</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>DT</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Time</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>TM</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Acknowledgment Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Note Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </segment>
+      <segment id="4">
+         <name>ISA</name>
+         <description>INTERCHANGE CONTROL HEADER</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Authorization Information Qualifier</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Authorization Information</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Security Information Qualifier</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Security Information</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange ID Qualifier</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Sender ID</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange ID Qualifier</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Receiver ID</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Date</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Time</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Control Standards Identifier</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Control Version Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Interchange Control Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Acknowledgment Requested</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Usage Indicator</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Component Element Separator</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </segment>
+      <match msg="TA1">
+      </match>
+      <message name="TA1">
+         <ignore_unknown_segments>True</ignore_unknown_segments>
+         <ignore_segment_order>False</ignore_segment_order>
+         <in_equation><![CDATA[]]></in_equation>
+         <out_equation><![CDATA[]]></out_equation>
+         <message_grammar id="0">
+            <name>Message</name>
+            <is_optional>False</is_optional>
+            <is_repeating>False</is_repeating>
+            <ignore_segment_order>False</ignore_segment_order>
+            <max_repeats>0</max_repeats>
+            <type>group</type>
+            <message_grammar id="1">
+               <name>ISA</name>
+               <is_optional>False</is_optional>
+               <is_repeating>False</is_repeating>
+               <ignore_segment_order>False</ignore_segment_order>
+               <max_repeats>0</max_repeats>
+               <type>segment</type>
+               <segment_ref>4</segment_ref>
+            </message_grammar>
+            <message_grammar id="2">
+               <name>TA1</name>
+               <is_optional>True</is_optional>
+               <is_repeating>False</is_repeating>
+               <ignore_segment_order>False</ignore_segment_order>
+               <max_repeats>0</max_repeats>
+               <type>segment</type>
+               <segment_ref>3</segment_ref>
+            </message_grammar>
+            <message_grammar id="3">
+               <name>IEA</name>
+               <is_optional>True</is_optional>
+               <is_repeating>False</is_repeating>
+               <ignore_segment_order>False</ignore_segment_order>
+               <max_repeats>0</max_repeats>
+               <type>segment</type>
+               <segment_ref>2</segment_ref>
+            </message_grammar>
+         </message_grammar>
+         <identifier>
+            <segment_ref>ST</segment_ref>
+            <value>270</value>
+            <node_address>
+               <pair>
+                  <node_index>0</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+            </node_address>
+         </identifier>
+         <table_grammar name="TA1">
+            <type>group</type>
+            <grammar_field_index>-1</grammar_field_index>
+            <grammar_root_ref>0</grammar_root_ref>
+         </table_grammar>
+      </message>
+      <app_settings>
+         <config name="default">
+            <ack_message>TA1</ack_message>
+            <eom_char>0</eom_char>
+            <octal_escape_char>48</octal_escape_char>
+            <escape_default>92</escape_default>
+            <escape_escape_char>69</escape_escape_char>
+            <escape_position>-1</escape_position>
+            <stub_file_dir><![CDATA[c:\temp]]></stub_file_dir>
+            <stub_file_language></stub_file_language>
+            <stub_file_prefix>HL7</stub_file_prefix>
+            <output_trailing_separators>False</output_trailing_separators>
+            <parse_separator_chars>False</parse_separator_chars>
+            <lowest_unescaped_char>32</lowest_unescaped_char>
+            <highest_unescaped_char>255</highest_unescaped_char>
+            <preset_config>Custom</preset_config>
+            <main_equation><![CDATA[]]></main_equation>
+            <parse_complete_equation><![CDATA[]]></parse_complete_equation>
+            <postprocess_equation><![CDATA[]]></postprocess_equation>
+            <main_out_equation><![CDATA[]]></main_out_equation>
+            <postprocess_out_equation><![CDATA[]]></postprocess_out_equation>
+            <output_segment_line_feed>True</output_segment_line_feed>
+            <xml_delimiter>46</xml_delimiter>
+            <xml_translation_type>TABLE - Short Tags</xml_translation_type>
+            <use_segment_checker3>False</use_segment_checker3>
+            <xml_schema_single_file>True</xml_schema_single_file>
+            <header_fields_to_skip>1</header_fields_to_skip>
+            <disable_untyped_tree_in_exception>False</disable_untyped_tree_in_exception>
+            <maximum_repeat_mapping_limit>2</maximum_repeat_mapping_limit>
+            <database_equation_on>False</database_equation_on>
+            <disable_python_none>True</disable_python_none>
+            <header_segment>ISA</header_segment>
+            <last_message_matches_all>True</last_message_matches_all>
+            <parser_version>2</parser_version>
+            <separator_info>
+               <sep_char_default>11</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>0</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>-1</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>42</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>0</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>-1</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>58</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>0</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>-1</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>4</sep_char_default>
+               <repeat_char_default>244</repeat_char_default>
+               <sep_char_escape>0</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>-1</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <connection_info>
+               <label></label>
+               <api></api>
+               <db_name></db_name>
+               <username></username>
+               <password></password>
+            </connection_info>
+            <escape_data_for_xml_to_hl7>True</escape_data_for_xml_to_hl7>
+            <validate_data_for_xml_to_hl7>True</validate_data_for_xml_to_hl7>
+         </config>
+      </app_settings>
+   </config>
+</engine>

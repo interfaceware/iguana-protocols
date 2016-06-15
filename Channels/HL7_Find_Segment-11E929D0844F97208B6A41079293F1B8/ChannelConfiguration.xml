@@ -1,0 +1,24 @@
+<channel
+   name="HL7: Find Segment"
+   guid="11E929D0844F97208B6A41079293F1B8"
+   description="This shows an example module which can iterate through an HL7 message finding a segment that matches a given criteria using a function supplied by the user.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/hl7-findsegment"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="HL7_Find_Segment-To-wgWjTlCyvEWxDs"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian.">
+      <dequeue_list>
+         <dequeue
+            source_name="self"
+            dequeue_guid="9AEB5D9D3FA16A6CB074EF9074D0AD5F"/>
+      </dequeue_list>
+   </to_mapper>
+   <from_llp_listener
+      ack_vmd_path="/Applications/iNTERFACEWARE-Iguana.app/Contents/iNTERFACEWARE-Iguana/autoack.vmd"
+      port="7009"
+      connection_timeout="30"
+      unlimited_connection_timeout="false"
+      ack_style="fast"/>
+</channel>

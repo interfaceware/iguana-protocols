@@ -1,0 +1,15 @@
+{
+    "LocalDependencies": [
+        "270v3.vmd",
+        "271v3.vmd",
+        "mappings.lua"
+    ],
+    "LuaDependencies": [],
+    "OtherDependencies": [],
+    "timestamp": "1466020363",
+    "version_info": {
+        "build": 0,
+        "major": 6,
+        "minor": 0
+    }
+}

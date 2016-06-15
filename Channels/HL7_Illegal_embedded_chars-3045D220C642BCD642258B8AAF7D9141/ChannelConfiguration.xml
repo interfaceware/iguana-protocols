@@ -1,0 +1,14 @@
+<channel
+   name="HL7: Illegal embedded chars"
+   guid="3045D220C642BCD642258B8AAF7D9141"
+   description="The &amp; character is a delimiter character in HL7 which should be escaped.&#xD;&#xA;&#xD;&#xA;Unfortunately some implementations are incorrect in that they do not escape user entered content that contain these characters.&#xD;&#xA;&#xD;&#xA;This example shows how one can preprocess HL7 messages to solve this problem.&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/v6/hl7-illegal-embedded-chars&#xD;&#xA;&#xD;&#xA;For forum discussion see:&#xD;&#xA;&#xD;&#xA;http://help.interfaceware.com/forums/topic/how-to-handle-special-characters-in-message-field"
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="HL7_Illegal_embedded_chars-To-urrpiE7BYNe7Qj"
+      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
+      commit_comment="Import Translators: Next import of channels from Julian.">
+   </to_mapper>
+   <from_channel/>
+</channel>
