@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="X12_Generate_TA1_Ack-To-doFvpkwYziDpQP"
-      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
-      commit_comment="Import Translators: Next import of channels from Julian.">
+      commit_id="bfb0ba06374fae9157e8893c7c461de77d687dec"
+      commit_comment="Import Translators: Batch">
    </to_mapper>
    <from_channel/>
 </channel>

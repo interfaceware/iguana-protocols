@@ -19,7 +19,7 @@ local function FixSegment(Segment, FieldIndex)
 end
 
 
-function FixAmpersandDelimiters(T)
+local function FixAmpersandDelimiters(T)
    local Data = T.data
    local SegmentName = T.segment
    local FieldIndex = T.field_index + 1
@@ -35,19 +35,29 @@ function FixAmpersandDelimiters(T)
 end
 
 local Help=[[{
-   "Desc": "Fix up unescaped & characters within an HL7 message.",
+   "Desc": 'Fix up unescaped "&" (ampersand) characters within an HL7 message.',
    "Returns": [],
-   "SummaryLine": "Fix up unescaped & characters within an HL7 message.",
+   "SummaryLine": "Fix unescaped & characters within an HL7 message.",
    "Title": "hl7.delimiter.fix",
-   "Usage": "Data = hl7.delimiter.fix{data=Data, segment='OBX', field_index=5}",
+   "Usage": "hl7.delimiter.fix{data=&lt;Value&gt;, segment=&lt;Value&gt;, field_index=&lt;Value&gt;}",
    "Parameters": [
       {"data"        : {"Desc": "The HL7 message to be modified <u>string</u>. "}},
       {"segment"     : {"Desc": "Name of the segment(s) to be modified <u>string</u>. "}},
       {"field_index" : {"Desc": "Index of field to be modified <u>integer</u>. "}}
-
+   ],
+   "SeeAlso": [
+      {
+         'Title':"HL7: Illegal embedded chars ",
+         'Link':"http://help.interfaceware.com/v6/hl7-illegal-embedded-chars"
+      },
+      {
+         'Title':"Source code for the hl7.delimiter.fix.lua module on github",
+         'Link':"https://github.com/interfaceware/iguana-protocols/blob/master/shared/hl7/delimiter/fix.lua"
+      }
    ],
    "Examples": [
       "<pre>
+-- fix field 5 in the OBX segment
 hl7.fix = require 'hl7.delimiter.fix'
 local FixedData = hl7.fix{data=Data, segment='OBX', field_index=5}
 </pre>"

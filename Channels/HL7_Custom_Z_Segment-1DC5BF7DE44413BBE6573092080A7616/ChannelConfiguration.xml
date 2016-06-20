@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="HL7_-_Custom_Z_Segment-To-4y2BCsfbchWlkk"
-      commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
-      commit_comment="Import Translators: Next import of channels from Julian.">
+      commit_id="a566f5eeea666a0a603398420aa4c32a5146c867"
+      commit_comment="Extra newline.">
       <dequeue_list>
          <dequeue
             source_name="self"

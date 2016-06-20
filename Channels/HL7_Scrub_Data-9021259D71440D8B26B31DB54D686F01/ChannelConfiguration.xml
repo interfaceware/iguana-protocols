@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="HL7_Scrub_Data-To-R4J23eQwOP6VUX"
-      commit_id="bad78a29c04f9f9bce64aa6f6c5c2c8c3c1106ab"
-      commit_comment="Corrected typo.">
+      commit_id="bfb0ba06374fae9157e8893c7c461de77d687dec"
+      commit_comment="Import Translators: Batch">
    </to_mapper>
    <from_channel/>
 </channel>

@@ -45,7 +45,7 @@
       error_handling="0"
       use_translator_filter="true"
       translator_guid="HL7_Custom_Delimiters-Filter-Q1enCQWiqVIkzI"
-      translator_commit_id="e45ed29e82f08555aac860e475205ab5fd7196be"
-      translator_commit_comment="Import Translators: Next import of channels from Julian.">
+      translator_commit_id="bfb0ba06374fae9157e8893c7c461de77d687dec"
+      translator_commit_comment="Import Translators: Batch">
    </message_filter>
 </channel>

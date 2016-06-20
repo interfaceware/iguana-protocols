@@ -1,5 +1,3 @@
--- Please read http://help.interfaceware.com/v6/x12-generate-ta1-ack
-
 -- This module goes through the process of generating an X12 ACKnowledgement which in X12 jargon
 -- is called a TA1 Acknowledgement.
 
@@ -19,6 +17,8 @@
 
 -- Use of TA1 is subject to trading partner agreement and is neither mandated or prohibited or limited by test cases 
 -- suggested in this example.
+
+-- http://help.interfaceware.com/v6/x12-generate-ta1-ack 
 
 local x12ack = {}
 local codemap = require 'codemap'
@@ -57,7 +57,7 @@ end
 -- For efficiency we define each set 1 time
 
 -- # 001 - ISA-13 The Interchange Control Number in the Header and Trailer Do Not Match. The Value From the Header is Used in the Acknowledgment.
-function CheckInterchangeControlNumberMatch(n, Errata)
+local function CheckInterchangeControlNumberMatch(n, Errata)
    trace("ISA.13="..n.ISA[13])
    trace("IEA.2 ="..n.IEA[2])
    if not IsMatching(n.ISA[13],n.IEA[2]) then
@@ -69,7 +69,7 @@ end
 
 -- # 014 - ISA-09 Invalid Interchange Date Value,  The date format is YYMMDD
 -- # 015 - ISA-10 Invalid Interchange Time Value,  The time format is HHMM
-function CheckDateTime(n, Errata)
+local function CheckDateTime(n, Errata)
    trace("ISA.9 ="..n.ISA[9])
    trace("ISA.10="..n.ISA[10])
    CC = CC or '20' -- defaults to 21st century
@@ -102,7 +102,7 @@ end
 
 -- # 018 - ISA-13  Invalid Interchange Control Number Value
 -- Check interchange control number present and is a number
-function CheckInterchangeControlNumberInISA(n, Errata)
+local function CheckInterchangeControlNumberInISA(n, Errata)
    trace("ISA.13="..n.ISA[13])
    if IsEmpty (n.ISA[13]) then 
       return Errata:add('018', 
@@ -116,7 +116,7 @@ end
 
 -- # 018 - ISA-13  Invalid Interchange Control Number Value
 -- Check interchange control number in ISA-13 is present and is a number
-function CheckInterchangeControlNumberInIEA(n, Errata)
+local function CheckInterchangeControlNumberInIEA(n, Errata)
    trace("IEA.2="..n.IEA[2])
    if IsEmpty (n.IEA[2]) then 
       return Errata:add('018', 
@@ -131,7 +131,7 @@ end
 --  # 002 - ISA-11 This Standard as Noted in the Control Standards Identifier is Not Supported.
 -- Check if Standard is supported in the supported Standard List (which is quite small - just 'U'! 
 local SSL = codemap.set{'U'}
-function IsControlStandardsIdentifierValid(n, Errata)
+local function IsControlStandardsIdentifierValid(n, Errata)
    trace("ISA.11="..n.ISA[11])
    if not IsInList(n.ISA[11],SSL) then
       return Errata:add('002', 
@@ -143,7 +143,7 @@ end
 -- Check Interchange Control Version Number
 -- supported Controls Version List
 local SCV = codemap.set{'00401'}
-function CheckVersionControlID(n, Errata)
+local function CheckVersionControlID(n, Errata)
    trace("ISA.12="..n.ISA[12])
    if not IsInList(n.ISA[12],SCV) then
       return Errata:add('003', 
@@ -155,7 +155,7 @@ end
 -- Check Interchange ID Qualifier for Sender
 -- valid Interchange ID Qualifier For Sender List
 local VIIQFS = codemap.set{'01','14','20','27','28','29','30','33','ZZ'}
-function CheckInterchangeIDQualifierforSender(n, Errata)
+local function CheckInterchangeIDQualifierforSender(n, Errata)
    trace("ISA.5="..n.ISA[5])
    if not IsInList(n.ISA[5],VIIQFS) then
       return Errata:add('005', 
@@ -167,7 +167,7 @@ end
 -- Check Interchange Sender ID
 -- valid Interchange Sender ID List
 local VISI = codemap.set{'345529167','Sender'}
-function CheckInterchangeSenderID(n, Errata)
+local function CheckInterchangeSenderID(n, Errata)
    trace("ISA.6="..n.ISA[6])
    if not IsInList(n.ISA[6],VISI) then
       return Errata:add('006', 
@@ -179,7 +179,7 @@ end
 -- Check Interchange ID Qualifier for Receiver
 -- valid Interchange ID Qualifier For Receiver List
 local VIIQFR = codemap.set{'01','14','20','27','28','29','30','33','ZZ'}
-function CheckInterchangeIDQualifierforReceiver(n, Errata)
+local function CheckInterchangeIDQualifierforReceiver(n, Errata)
    trace('ISA.7='..n.ISA[7])
    if not IsInList(n.ISA[7],VIIQFR) then
       return Errata:add('007', 
@@ -189,7 +189,7 @@ end
 
 -- # 008 - ISA-08 Check Interchange Receiver ID is present and valid
 local VIRI = codemap.set{'445483154','ReceiverID','4000136'}
-function CheckInterchangeReceiverID(n, Errata)
+local function CheckInterchangeReceiverID(n, Errata)
    trace("ISA.8="..n.ISA[8])
    if IsEmpty(n.ISA[8]) then
       return Errata:add('008', 
@@ -204,7 +204,7 @@ end
 -- # 010 - ISA-01 Invalid Authorization Information Qualifier Value
 -- valid Authorization Information Qualifier Value List
 local VAIQV = codemap.set{'00','03'}
-function CheckAuthorizationInformationQualifier(n, Errata)
+local function CheckAuthorizationInformationQualifier(n, Errata)
    trace("ISA.1="..n.ISA[1])
    if not IsInList(n.ISA[1],VAIQV) then
       return Errata:add('010', 
@@ -215,7 +215,7 @@ end
 -- # 012 - ISA-03 Invalid Security Information Qualifier Value
 -- valid Security Information Qualifier Value List
 local VSIQV = codemap.set{'00','01'}
-function CheckSecurityInformationQualifier(n, Errata)
+local function CheckSecurityInformationQualifier(n, Errata)
    trace('ISA.3='..n.ISA[3])
    if not IsInList(n.ISA[3],VSIQV) then
       return Errata:add('012', 
@@ -225,7 +225,7 @@ end
 
 -- # 011 - ISA-02 Invalid Authorization Information Value       
 local I01L = 10
-function CheckAuthorizationInformation(n, Errata)
+local function CheckAuthorizationInformation(n, Errata)
    trace("ISA.1="..n.ISA[1])
    trace("ISA.2="..n.ISA[2])
    if not (IsEmpty(n.ISA[2]) and n.ISA[1]:nodeValue() == '00') then
@@ -245,7 +245,7 @@ end
 
 -- # 013 - ISA-04 Invalid Security Information Value
 local I03L = 10
-function CheckSecurityInformation(n, Errata)
+local function CheckSecurityInformation(n, Errata)
    trace("ISA.3="..n.ISA[3])
    trace("ISA.4="..n.ISA[4])
    if not (IsEmpty(n.ISA[4]) and n.ISA[3]:nodeValue() == '00') then
@@ -267,7 +267,7 @@ end
 -- # 019 - Invalid Acknowledgment Requested Value 
 -- Boolean values replacement in EDI
 local BOOL = codemap.set{'0','1'}
-function CheckAcknowledgmentRequested(n, Errata)
+local function CheckAcknowledgmentRequested(n, Errata)
    trace("ISA.14="..n.ISA[14])
    if not IsInList(n.ISA[14],BOOL) then
       return Errata:add('019', 
@@ -278,7 +278,7 @@ end
 -- # 020 - ISA[15] Invalid Test Indicator Value
 -- valid Usage Indicator List
 local VUIL = codemap.set{'P', 'T'}
-function CheckTestIndicator(n, Errata)
+local function CheckTestIndicator(n, Errata)
    trace("ISA.15="..n.ISA[15])
    if not IsInList(n.ISA[15],VUIL) then
       return Errata:add('020', 
@@ -287,7 +287,7 @@ function CheckTestIndicator(n, Errata)
 end
 
 -- # 021 - IEA[1] Invalid Number of Included Groups Value
-function CheckNumberofIncludedGroups(n, Errata)
+local function CheckNumberofIncludedGroups(n, Errata)
    trace("IEA.1="..n.IEA[1])
    if not IsNumber(n.IEA[1]) then
       return Errata:add('021', 
@@ -384,7 +384,7 @@ end
 -- Help documentation for jwt.sign
 local X12AckHelp = {
    Title = "x12ack.generate",
-   Usage = "local Ack, Report, ErrorList = x12ack.generate{data=X12Message}",
+   Usage = "x12ack.generate{data = &lt;Value&gt;}",
    Desc  = [[
 Attempts to produce an X12 TA1 Acknowledgement based on the passed in X12 message
 which should already be parsed.
@@ -392,11 +392,11 @@ which should already be parsed.
    ParameterTable = true,
 
    Parameters = {
-      { data = { Desc='Parsed X12 message<u>X12 Message</u>.'}},
+      { data = { Desc='Parsed X12 message <u>X12 Message</u>.'}},
    },
 
    Returns   = {
-      { Desc = 'TA1 X12 Ack<u>string</u>' },
+      { Desc = 'TA1 X12 Ack <u>string</u>' },
       { Desc = 'Report of validation errors <u>string</u>' },
       { Desc = 'List of validation errors and codes <u>table</u>' },
    },

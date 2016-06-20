@@ -3,6 +3,8 @@
 -- iNTERFACEWARE permits you to use, modify, and distribute this file in accordance
 -- with the terms of the iNTERFACEWARE license agreement accompanying the software
 -- in which it is used.
+
+-- http://help.interfaceware.com/v6/hl7-findsegment
  
 -- General purpose routine to iterate through a message tree and find a segment matching the Filter function given.
 local function FindSegment(Msg, Filter)
@@ -86,12 +88,16 @@ local hl7_findSegment = {
    };
    SeeAlso={
       {
-         Title="hl7.findSegment.lua - in our code repository",
-         Link="http://help.interfaceware.com/code/details/hl7util-lua"
+         Title="Source code for the hl7.findSegment module on github",
+         Link="https://github.com/interfaceware/iguana-protocols/blob/master/shared/hl7/findSegment.lua"
       },
       {
          Title="hl7.findSegment",
          Link="http://help.interfaceware.com/v6/hl7-findsegment"
+      },
+      {
+         Title="API documentation for hl7.parse",
+         Link="http://help.interfaceware.com/api/#hl7_parse"
       }
    }
 }

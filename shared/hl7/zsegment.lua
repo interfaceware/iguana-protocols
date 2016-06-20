@@ -1,5 +1,6 @@
 -- Generic Z segment parser
--- http://help.interfaceware.com/kb/generic-z-segment-parser
+
+-- http://help.interfaceware.com/v6/hl7-custom-zsegment
 
 local function ParseDelim(Data, DelimArray, Index, Compact)
    if Index == 0 then
@@ -62,13 +63,13 @@ local HELP_DEF=[[{
    "SummaryLine": "Parses an HL7 message for Z-zegments without a vmd.",
    "SeeAlso": [
       {
-         "Title": "hl7.zsegment.lua.",
-         "Link": "http://help.interfaceware.com/code/details/hl7-zsegment-lua"
+         "Title": "HL7: Custom Z Segment",
+         "Link": "http://help.interfaceware.com/v6/hl7-custom-zsegment"
       },
       {
-         "Title": "Parsing Z segments without a vmd (Iguana 5 documentation).",
-         "Link": "http://help.interfaceware.com/kb/generic-z-segment-parser"
-      }
+         "Title": "Source code for the hl7.zsegment.lua on github",
+         "Link": "https://github.com/interfaceware/iguana-protocols/blob/master/shared/hl7/zsegment.lua"
+      },
    ],
    "Title": "hl7.parseZSegment",
    "Usage": "hl7.parseZSegment{data=&#60;value&#62;, compact=&#60;true|false&#62;}",

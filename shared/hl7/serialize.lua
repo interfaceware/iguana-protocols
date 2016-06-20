@@ -1,5 +1,6 @@
--- hl7.serialize module - see 
--- http://help.interfaceware.com/code/details/hl7-serialize-lua
+-- hl7.serialize module
+
+-- http://help.interfaceware.com/v6/hl7-custom-delimiters
 
 -- Will search for instances of Pattern in S.
 -- Will call replacement function onUnmatched
@@ -123,5 +124,55 @@ local function Serialize(Params)
    
    return Serialized
 end
+
+-- Only for HL7 Messages
+-- Accepts a table which must contain the following parameter:
+--   data: the HL7 message to be serialized.
+-- Also accepts the following optional parameters:
+--   delimiters: a list of delimiters to use in the message,
+--      if different from the default {'\r', '|', '^', '~', '\\', '&'}.
+--   escaped: a list representing the character used to represent
+--      an escaped delimiter character, if different from the default
+--      {'F', 'S', 'R', 'E', 'T'}.
+--
+local Help = {
+   Title="Serialize",
+   Usage="Serialize{data=&lt:value&gt; [, delimiters=&lt:value&gt;] [, escaped=&lt:value&gt;]}",
+   ParameterTable=true,
+   Parameters={
+      {data={Desc="HL7 message <u>hl7 node tree</u>."}},
+      {delimiters={Desc="List of custom HL7 delimiters (default = HL7 default delimiters) <u>table</u>.", Opt=true}},
+      {escaped={Desc="List of custom delimiter escape characters (default = HL7 default escaping) <u>table</u>.", Opt=true}},
+   },
+   Returns={
+      {Desc="HL7 message <u>string</u>."}
+   },
+   Examples={[[-- use standard delimiters and escaping
+hl7.serialize{data=Msg]],
+      [[-- custom delimiters and standard escaping
+hl7.serialize{data=Msg, delimiters = {'\n', '#', '.', '&', '\'', '*'}}]],
+      [[-- standard delimiters and custom escaping
+hl7.serialize{data=Msg, escaped = {'A', 'B', 'C', 'D', 'E'}}]],
+      [[-- custom delimiters and custom escaping
+hl7.serialize{data = Msg, 
+   delimiters = {'\n', '&', '\\', '}', '~', '^'},
+   escaped = {'A', 'B', 'C', 'D', 'E'}}]]
+   },
+   Desc=[[Create an HL7 message using specified custom delimiters and/or custom delimiter 
+escaping. <br><br><b>Note</b>: This only works for HL7 messages.]],
+   SeeAlso={
+      {
+         Title="HL7: Custom Z Segment",
+         Link="http://help.interfaceware.com/v6/hl7-custom-zsegment"
+      },
+      {
+         Title="Source code for the hl7.zsegment.lua on github",
+         Link="https://github.com/interfaceware/iguana-protocols/blob/master/shared/hl7/zsegment.lua"
+      }
+   },
+}
+
+help.set{input_function=Serialize, help_data=Help}
+
 
 return Serialize
